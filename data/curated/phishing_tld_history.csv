@@ -1,0 +1,183 @@
+year,period_start,period_end,tld,rank_count,domains_in_tld,phishing_domains,rank_score,phishing_score,rank_malreg,malicious_registrations,malicious_score,source,notes
+2020,2020-05-01,2020-07-31,com,1,151931301,43753,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,host,,97718,667,1,68.3,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,buzz,5,604706,2704,2,44.7,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,xyz,2,3136553,4059,9,12.9,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,best,,113614,433,3,38.1,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,tk,3,25644936,3798,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,casa,,30000,83,4,27.7,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,top,4,3748802,3003,17,8.0,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,services,,53454,146,5,27.3,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,ga,6,5057226,2574,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,ph,,107421,185,6,17.2,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,ml,7,4162031,2559,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,monster,,104126,176,7,16.9,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,live,18,719372,1116,8,15.5,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,net,8,13705756,2319,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,info,9,4787440,2316,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,cf,10,4453018,1915,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,ve,,31788,37,10,11.6,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,gq,11,3692011,1738,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,pk,,89707,103,11,11.5,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,id,,344198,389,12,11.3,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,org,12,10648071,1639,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,business,,41500,44,13,10.6,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,icu,13,6611658,1589,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,wang,14,1392249,1385,14,9.9,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,ke,,80960,80,15,9.9,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,ru,15,4867074,1281,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,cn,16,15961895,1216,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,pe,,109174,93,16,8.5,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,online,17,1586898,1173,20,7.4,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains; 3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,center,,41437,31,18,7.5,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,br,19,4442239,1103,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2020,2020-05-01,2020-07-31,digital,,58002,43,19,7.4,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study; top 20 by phishing domain score
+2020,2020-05-01,2020-07-31,in,20,2284123,926,,,,,,https://interisle.net/PhishingLandscape2020.pdf,3-month study (May-Jul 2020); top 20 by reported phishing domains
+2021,2020-05-01,2021-04-30,com,1,151618533,260636,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,cyou,,54848,,1,269.5,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,bar,,128154,,2,233.3,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,tk,2,19987952,40002,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,best,,100508,,3,206.0,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,xyz,3,2978332,27532,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,casa,,40570,,4,199.7,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,ml,4,3816199,27284,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,buzz,,467985,,5,190.5,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,ga,5,4661469,21657,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,cf,6,4179760,19187,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,services,,52649,,6,181.0,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,gq,7,3375388,16168,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,live,,526119,,7,160.6,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,cn,8,13708468,16052,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,monster,,109300,,8,159.7,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,link,,132529,,9,157.5,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,top,9,2306018,15129,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2021,2020-05-01,2021-04-30,host,,68101,,10,123.6,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by yearly phishing domain score
+2021,2020-05-01,2021-04-30,net,10,13407660,14398,,,,,,https://interisle.net/PhishingLandscape2021.pdf,Top 10 by reported phishing domains
+2022,2021-05-01,2022-04-30,com,1,,,,,,,,https://interisle.net/PhishingLandscape2022.pdf,Top 5 order from 3-year comparison in 2023 report; counts not extracted
+2022,2021-05-01,2022-04-30,cn,2,,,,,,,,https://interisle.net/PhishingLandscape2022.pdf,Top 5 order from 3-year comparison in 2023 report; counts not extracted
+2022,2021-05-01,2022-04-30,shop,3,,,,,,,,https://interisle.net/PhishingLandscape2022.pdf,Top 5 order from 3-year comparison in 2023 report; counts not extracted
+2022,2021-05-01,2022-04-30,xyz,4,,,,,,,,https://interisle.net/PhishingLandscape2022.pdf,Top 5 order from 3-year comparison in 2023 report; counts not extracted
+2022,2021-05-01,2022-04-30,tk,5,,,,,,,,https://interisle.net/PhishingLandscape2022.pdf,Top 5 order from 3-year comparison in 2023 report; counts not extracted
+2022,2021-05-01,2022-04-30,bar,,,,,562.1,,,,https://interisle.net/PhishingLandscape2022.pdf,Yearly score reported in 2022 study; exact rank not extracted
+2022,2021-05-01,2022-04-30,buzz,,,,,195.5,,,,https://interisle.net/PhishingLandscape2022.pdf,Yearly score reported in 2022 study; exact rank not extracted
+2022,2021-05-01,2022-04-30,casa,,,,,178.0,,,,https://interisle.net/PhishingLandscape2022.pdf,Yearly score reported in 2022 study; exact rank not extracted
+2022,2021-05-01,2022-04-30,live,,,,,208.1,,,,https://interisle.net/PhishingLandscape2022.pdf,Yearly score reported in 2022 study; exact rank not extracted
+2023,2022-05-01,2023-04-30,com,1,159531443,333158,,,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by reported phishing domains
+2023,2022-05-01,2023-04-30,cyou,,314942,13356,5,424.1,1,13010,,https://interisle.net/PhishingLandscape2023.pdf,97% maliciously registered; malicious-registration table; Top 5 by yearly phishing domain score
+2023,2022-05-01,2023-04-30,rest,,39700,2940,1,740.6,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by yearly phishing domain score
+2023,2022-05-01,2023-04-30,cn,2,7363700,117785,,,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by reported phishing domains
+2023,2022-05-01,2023-04-30,live,,649941,39714,2,611.0,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by yearly phishing domain score
+2023,2022-05-01,2023-04-30,ml,3,1630164,76715,4,470.6,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by reported phishing domains; Top 5 by yearly phishing domain score
+2023,2022-05-01,2023-04-30,support,,32705,1603,3,490.1,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by yearly phishing domain score
+2023,2022-05-01,2023-04-30,top,4,1945721,53286,,,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by reported phishing domains
+2023,2022-05-01,2023-04-30,tk,5,4729434,41798,,,,,,https://interisle.net/PhishingLandscape2023.pdf,Top 5 by reported phishing domains
+2024,2023-05-01,2024-04-30,com,1,156670775,379669,,24.2,1,275134,17.6,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,lol,12,347972,20096,1,577.5,10,19933,572.8,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,bond,16,271107,12800,2,472.1,16,12716,469.0,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,top,2,2768147,117014,4,422.7,2,115247,416.3,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,support,,36274,1577,3,434.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,xyz,3,3371694,67348,16,199.8,3,62439,185.2,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,cn,4,8172577,55627,,68.1,6,26354,32.3,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,shop,6,2753794,31179,,113.2,4,31129,113.0,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,info,5,3589133,31734,,88.4,5,28076,78.2,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,sbs,10,605035,21962,5,363.0,9,21683,358.4,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,quest,,43216,1377,6,318.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,best,,64022,1934,7,302.1,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,net,7,12796792,30369,,23.7,8,22048,17.2,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,online,8,3022683,26799,,88.7,7,22727,75.2,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,finance,,34293,891,8,259.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,org,9,10846688,24270,,22.4,11,18712,17.3,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,tk,,79478,2057,9,258.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,pics,,62187,1595,10,256.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,life,19,402382,9602,11,238.6,19,9048,224.9,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,ru,11,5510517,20186,,36.6,12,16054,29.1,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,club,15,586166,13260,12,226.2,15,12749,217.5,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,fyi,,60427,1359,13,224.9,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,site,13,1549651,16893,,109.0,13,14495,93.5,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,cfd,14,960007,13960,,145.4,14,13428,139.9,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,win,,92678,2055,14,221.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,live,17,558414,11922,15,213.5,17,10248,183.5,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,buzz,,271549,4769,17,175.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,autos,,42608,696,18,163.4,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,cc,18,1200025,11583,,96.5,18,9878,82.3,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,click,20,509882,8222,19,161.3,20,7548,148.0,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2024,2023-05-01,2024-04-30,ink,,79156,1224,20,154.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2024,Annual study period
+2025,2024-05-01,2025-04-30,com,1,154712032,455297,,29.4,1,306233,19.79,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,xin,7,39522,42724,1,10810.2,5,42681,10799.3,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,bond,3,454090,79875,2,1759.0,3,79690,1754.94,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,top,2,3525239,187749,8,532.6,2,161655,458.56,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,help,,43991,4741,3,1077.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,win,,82992,6607,4,796.1,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,xyz,4,4219839,73509,,174.2,4,64711,153.35,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,cfd,14,324157,24241,5,747.8,11,23219,716.29,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,shop,5,3321636,50052,,150.7,8,26892,80.96,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,finance,,32064,1930,6,601.9,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,info,6,3871727,44540,,115.0,6,37237,96.18,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,support,,37431,2086,7,557.3,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,vip,12,1272004,30216,,237.6,7,27585,216.86,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,cn,8,11606857,40763,,35.1,,14439,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,online,9,2950523,33414,,113.3,10,25650,86.93,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,ru,11,5777653,31312,,54.2,9,25682,44.45,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,world,,312180,15408,9,493.6,20,14486,464.03,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,fyi,,85395,4082,10,478.0,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,net,10,12352692,31743,,25.7,14,22178,17.95,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,lol,15,516184,24187,11,468.6,12,23122,447.94,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,icu,19,422101,19392,12,459.4,16,18210,431.41,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,cc,13,1865743,24550,,131.6,13,22252,119.27,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,cyou,,209499,7262,13,346.6,,6766,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,mom,,49315,1709,14,346.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,sbs,17,786261,23293,18,296.3,15,21990,279.68,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,zone,,77426,2559,15,330.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,monster,,46750,1476,16,315.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,org,16,11185745,24111,,21.6,18,16167,14.45,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,pics,,58241,1770,17,303.9,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,site,18,1516396,20595,,135.8,17,16185,106.73,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,best,,52667,1560,19,296.2,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,pro,20,863933,17078,,197.7,19,15159,175.46,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables; Annual study period
+2025,2024-05-01,2025-04-30,buzz,,288216,7788,20,270.2,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2025,Annual study period
+2025,2024-05-01,2025-04-30,click,,562399,13414,,,,11986,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,garden,,4708,,,6.4,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,homes,,80485,,,142.0,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,ink,,87499,,,236.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,jp,,1746685,534,,,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,lat,,132729,,,166.1,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,life,,388271,,,166.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,live,,558758,14257,,255.2,,12624,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,mobi,,249281,,,13.1,,242,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,qpon,,14175,,,92.4,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,rest,,74804,,,205.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2025,2024-05-01,2025-04-30,wang,,65023,,,51.4,,,,https://www.cybercrimeinfocenter.org/phishing-activity-year-over-year-tlds-may-april-2026,2025 baseline from 2026 year-over-year table; TLD may not have been in the 2025 top-20 tables
+2026,2025-05-01,2026-04-30,com,1,161935002,869180,,53.7,1,577821,35.68,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,xin,20,59352,35077,1,5910.0,17,33541,5651.2,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,top,2,6299448,375514,17,596.1,2,297486,472.24,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,win,,113527,18626,2,1640.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,cn,3,12352863,167651,,135.7,10,65939,53.38,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,icu,10,465381,74786,3,1607.0,8,71070,1527.14,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,pro,4,1091118,130945,6,1200.1,3,110609,1013.72,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,garden,,65955,10340,4,1567.7,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,vip,7,1673065,83816,,501.0,4,79694,476.34,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,cfd,11,511345,70944,5,1387.4,9,67461,1319.29,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,info,5,5250592,99602,,189.7,7,71488,136.15,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,xyz,6,7948829,93987,,118.2,5,79436,99.93,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,cc,9,2431298,77660,,319.4,6,72266,297.23,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,help,,176801,18715,7,1058.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,mom,,57458,5728,8,996.9,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,shop,8,3942700,79625,,202.0,12,48459,122.91,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,rest,,79245,7774,9,981.0,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,mobi,,395488,33424,10,845.1,19,30234,764.47,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,qpon,,72471,5941,11,819.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,sbs,12,1370480,63518,,463.5,11,59737,435.88,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,live,17,561277,41523,12,739.8,16,37525,668.56,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,bond,16,1146414,41594,,362.8,13,41184,359.24,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,ink,,111084,7980,13,718.4,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,net,13,12205093,56360,,46.2,14,39123,32.05,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,best,,36275,2563,14,706.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,online,14,3318823,47376,,142.8,15,38185,115.06,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,jp,15,1804563,46845,,259.6,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,lat,,137498,9137,15,664.5,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,cyou,,452272,29923,16,661.6,20,28685,634.24,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,click,18,723583,35653,,492.7,18,32150,444.32,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,wang,,42308,2288,18,540.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,life,,415226,21836,19,525.9,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,org,19,11817837,35176,,29.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period
+2026,2025-05-01,2026-04-30,homes,,83487,4365,20,522.8,,,,https://www.cybercrimeinfocenter.org/phishing-activity-in-tlds-may-april-2026,Annual study period

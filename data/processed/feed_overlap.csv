@@ -1,0 +1,11 @@
+feed_a,feed_b,hosts_a,hosts_b,intersection,jaccard_pct,containment_pct
+openphish,phishing_army,284,152837,276,0.18,97.18
+openphish,phishing_database,284,386094,0,0.0,0.0
+openphish,spam404,284,8140,0,0.0,0.0
+openphish,phishing_filter,284,23952,238,0.99,83.8
+phishing_army,phishing_database,152837,386094,1220,0.23,0.8
+phishing_army,spam404,152837,8140,0,0.0,0.0
+phishing_army,phishing_filter,152837,23952,20165,12.87,84.19
+phishing_database,spam404,386094,8140,7,0.0,0.09
+phishing_database,phishing_filter,386094,23952,1711,0.42,7.14
+spam404,phishing_filter,8140,23952,0,0.0,0.0

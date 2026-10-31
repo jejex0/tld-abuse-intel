@@ -1,0 +1,58 @@
+name: Refresh TLD intelligence
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-tld-intel
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect current feeds
+        run: python scripts/collect.py
+
+      - name: Reconstruct payload and C2 history
+        run: python scripts/collect_history.py
+
+      - name: Analyze
+        run: python scripts/analyze.py
+
+      - name: Generate figures
+        run: python scripts/charts.py
+
+      - name: Generate report
+        run: python scripts/report.py
+
+      - name: Validate outputs
+        run: python scripts/validate.py
+
+      - name: Commit refreshed data and report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed reports
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: refresh TLD intelligence $(date -u +%Y-%m-%d)"
+          git push
