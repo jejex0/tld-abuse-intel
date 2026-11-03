@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Methodology and limitations
+    url: https://github.com/jejex0/tld-abuse-intel/blob/main/docs/METHODOLOGY.md
+    about: Read how data is collected, scored, and tiered before filing a model issue.
+  - name: Full analysis report
+    url: https://github.com/jejex0/tld-abuse-intel/blob/main/reports/ANALYSIS.md
+    about: Check the latest findings and caveats.

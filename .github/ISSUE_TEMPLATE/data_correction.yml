@@ -1,0 +1,63 @@
+name: Data correction
+description: Report an incorrect or missing value in the curated or reference data
+title: "data: "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve data quality. Corrections need a source and a
+        retrieval date so they can be verified.
+
+  - type: input
+    id: file
+    attributes:
+      label: File or dataset
+      description: Which file or output is affected?
+      placeholder: data/curated/phishing_tld_history.csv
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: Current value
+      description: What value is currently recorded?
+      placeholder: tld=example, year=2026, phishing_domains=1234
+    validations:
+      required: true
+
+  - type: input
+    id: corrected
+    attributes:
+      label: Corrected value
+      description: What should it be?
+      placeholder: phishing_domains=2345
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: Public source that supports the correction.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: retrieved
+    attributes:
+      label: Retrieval date
+      description: When did you retrieve the source? (YYYY-MM-DD)
+      placeholder: "2026-11-01"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Anything else that helps verify or contextualize the change.
+    validations:
+      required: false

@@ -1,30 +1,67 @@
 # TLD Abuse Intelligence
 
-A reproducible, source-attributed ranking of top-level domains by their
-concentration of **phishing**, **payload/staging**, and **command-and-control
-(C2)** abuse.
+![License: MIT](https://img.shields.io/github/license/jejex0/tld-abuse-intel)
+![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
+![Data refreshed weekly](https://github.com/jejex0/tld-abuse-intel/actions/workflows/refresh.yml/badge.svg)
+![Snapshot](https://img.shields.io/badge/snapshot-2026--11--02-informational)
 
-The project combines current live feeds, annual registry studies from 2020–2026,
-and archived snapshots recovered from the Internet Archive. It produces a
-four-tier risk model (Critical / High / Medium / Low) with a separate evidence
-confidence score, blocklist-suitability assessment, and a full analytical report.
+**Which top-level domains carry the most phishing, malware-staging, and C2 abuse — and which are actually safe to block?**
 
-> **Defensive research, not a blocklist.** A high tier means a namespace has a
+TLD Abuse Intelligence is a reproducible, source-attributed ranking of 67 top-level
+domains by their concentration of **phishing**, **payload/staging**, and
+**command-and-control (C2)** abuse. It combines live feeds, seven years of registry
+studies, and Internet Archive history into a four-tier risk model with a separate
+evidence-confidence score and a blocklist-suitability rating.
+
+![TLD risk matrix](reports/figures/fig03_risk_matrix.png)
+
+> **Defensive research, not a blocklist.** A high tier means a namespace shows a
 > high concentration of abuse. It does not mean every domain under that TLD is
-> malicious, and it does not mean the TLD is safe to block. Read
+> malicious, and it does not mean blocking the entire TLD is safe. Read
 > [`reports/ANALYSIS.md`](reports/ANALYSIS.md) before acting on any tier.
 
-## Key findings (snapshot 2026-10-31)
+## The short version
 
-- **549,046 live phishing hostnames** (281,193 unique registrable domains) from
-  five feeds, **1,892 payload hosts**, and **218 C2 hosts** were analyzed
-  alongside seven years of registry data.
+- **548,116 live phishing hostnames**, **1,911 payload hosts**, and **219 C2 hosts**
+  from live feeds, scored alongside seven years of annual registry data.
+- **67 TLDs scored:** 11 Critical, 34 High, 13 Medium, 9 Low.
+- **The biggest source is not the densest risk:** `.com` leads absolute volume
+  (869,180 annual phishing domains) but sits at 53.7 per 10k and is **not**
+  over-represented against popular benign domains.
+- **The extreme tail is attacker-registered, not compromised:** `.xin`, `.icu`,
+  `.cfd`, `.cyou`, and `.vip` are ~95% maliciously registered.
+- **26.0% of live phishing hosts sit on free-hosting/dynamic-DNS platforms**
+  (`duckdns.org`, `pages.dev`, `webflow.io`, `vercel.app`, `github.io`), not on
+  registrable TLD domains — these must be handled at the platform/account level.
+
+Full analysis, tables, charts, recommendations, and limitations:
+[`reports/ANALYSIS.md`](reports/ANALYSIS.md).
+
+## Contents
+
+- [Key findings](#key-findings)
+- [Risk tiers at a glance](#risk-tiers-at-a-glance)
+- [What to do first](#what-to-do-first)
+- [Outputs](#outputs)
+- [Quick start](#quick-start)
+- [Pipeline](#pipeline)
+- [Repository layout](#repository-layout)
+- [Data sources](#data-sources)
+- [Limitations](#limitations)
+- [Citing this work](#citing-this-work)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Key findings
+
+Snapshot 2026-11-02.
+
 - **67 TLDs scored:** 11 Critical, 34 High, 13 Medium, 9 Low.
   Evidence confidence: 19 High, 41 Medium, 7 Low.
 - **Critical TLDs:** `.top`, `.icu`, `.cfd`, `.xin`, `.pro`, `.win`, `.help`,
   `.cyou`, `.vip`, `.garden`, `.lol`. Ten are new gTLDs; `.pro` is a legacy gTLD.
 - **`.com` is the largest absolute source** (869,180 annual phishing domains),
-  but its density (53.7 per 10k) and live over-representation (0.92) are not
+  but its density (53.7 per 10k) and live over-representation (0.91) are not
   extreme. It is High risk and **Low** blocklist suitability.
 - **`.top` is the most persistent high-scale abuser:** 375,514 annual domains,
   596.1 per 10k, 79.2% maliciously registered, and top-10 by volume or density
@@ -32,13 +69,13 @@ confidence score, blocklist-suitability assessment, and a full analytical report
 - **The extreme tail is attacker-registered, not compromised:** `.xin` (5,910
   per 10k, 95.6% malicious), `.icu` (1,607 per 10k, 95.0%), `.cfd` (1,387 per
   10k, 95.1%), `.cyou` (95.9%), `.vip` (95.1%).
-- **26.0% of live phishing hosts sit on private platform suffixes** such as
-  `duckdns.org` (16,936), `pages.dev` (14,538), `webflow.io` (11,940),
-  `vercel.app` (11,566), and `github.io` (7,723). These are excluded from parent
-  TLD counts and must be controlled at the platform/account level.
-
-The full analysis, tables, charts, recommendations, and limitations are in
-[`reports/ANALYSIS.md`](reports/ANALYSIS.md).
+- **26.0% of live phishing hosts (142,520 of 548,116) sit on private platform
+  suffixes** such as `duckdns.org` (16,936), `pages.dev` (14,538),
+  `webflow.io` (11,940), `vercel.app` (11,566), and `github.io` (7,723). These
+  are excluded from parent TLD counts and must be controlled at the
+  platform/account level.
+- **Feed overlap is low**, so the union is justified: pairwise Jaccard overlap
+  ranges from 0.00% to 12.20%.
 
 ## Risk tiers at a glance
 
@@ -54,34 +91,32 @@ remain comparable across runs. Tier and confidence are independent: a Critical
 tier with Low confidence is a watchlist item, not a policy target. See
 [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
 
-## Repository layout
+## What to do first
 
-```
-.
-├── scripts/
-│   ├── common.py            # PSL parsing, host normalization, feed analysis
-│   ├── collect.py           # current feeds + Tranco + PSL
-│   ├── collect_history.py   # Wayback payload/C2 history
-│   ├── analyze.py           # risk scoring, tiers, confidence, aggregates
-│   ├── charts.py            # 12 report figures
-│   ├── report.py            # reports/ANALYSIS.md
-│   └── validate.py          # output and model invariants
-├── data/
-│   ├── curated/             # annual 2020–2026 phishing TLD data
-│   ├── reference/           # Public Suffix List
-│   ├── processed/           # committed aggregates and scores
-│   └── raw/                 # downloaded feeds (gitignored)
-├── reports/
-│   ├── ANALYSIS.md          # main analytical report
-│   ├── analysis_data.json   # machine-readable analysis payload
-│   └── figures/             # PNG charts
-├── docs/
-│   ├── METHODOLOGY.md
-│   └── DATA_SOURCES.md
-├── .github/workflows/refresh.yml
-├── Makefile
-└── requirements.txt
-```
+- **High-risk or constrained environments:** evaluate TLD-level blocks for
+  `.xin`, `.icu`, `.cfd`, `.cyou`, `.vip`, `.sbs`, `.click`, `.live`, `.win`,
+  `.help`, `.garden`, and `.top`. Validate business dependencies first; `.top`
+  and `.pro` have moderate collateral.
+- **Never blanket-block** `.com`, `.net`, `.org`, `.cn`, `.jp`, `.ru`, `.de`,
+  `.uk`, `.br`, `.in`, or `.io`; use domain-level detection and takedown.
+- **Control free-hosting subdomains** at the platform namespace level. Parent-TLD
+  rules such as "block `.dev`" would be both over-broad and ineffective.
+- **Monitor the surge cohort** (`.pro`, `.icu`, `.cfd`, `.cyou`, `.jp`, `.mobi`,
+  `.garden`) for campaign reuse, registrar concentration, and new-registration
+  patterns.
+- **Treat payload/C2 signals as enrichment**, not as standalone TLD evidence.
+  The C2 sample is too small for confident TLD-wide conclusions.
+
+## Outputs
+
+| Output | Description |
+|---|---|
+| [`reports/ANALYSIS.md`](reports/ANALYSIS.md) | Full analytical report with findings, tables, and recommendations |
+| [`reports/analysis_data.json`](reports/analysis_data.json) | Machine-readable analysis payload |
+| [`data/processed/tld_risk_scores.csv`](data/processed/tld_risk_scores.csv) | Per-TLD scores, tiers, and confidence |
+| [`data/processed/tld_risk_scores.json`](data/processed/tld_risk_scores.json) | Same scores as JSON |
+| [`reports/figures/`](reports/figures) | 12 report figures |
+| [`data/processed/snapshot_manifest.json`](data/processed/snapshot_manifest.json) | SHA-256 provenance for each source snapshot |
 
 ## Quick start
 
@@ -123,6 +158,9 @@ Useful options:
 | `collect_history.py --limit 8` | Cap Wayback snapshots per feed |
 | `analyze.py --snapshot YYYY-MM-DD` | Analyze a specific raw snapshot |
 
+A scheduled GitHub Actions workflow (`.github/workflows/refresh.yml`) refreshes
+the data every Monday at 06:00 UTC and commits the regenerated outputs.
+
 ## Pipeline
 
 1. **Collect** — five phishing feeds, URLhaus-derived payload lists, C2Intel
@@ -140,6 +178,35 @@ Useful options:
    separate blocklist-suitability rating.
 7. **Report** — Markdown report and 12 figures, validated for internal
    consistency.
+
+## Repository layout
+
+```
+.
+├── scripts/
+│   ├── common.py            # PSL parsing, host normalization, feed analysis
+│   ├── collect.py           # current feeds + Tranco + PSL
+│   ├── collect_history.py   # Wayback payload/C2 history
+│   ├── analyze.py           # risk scoring, tiers, confidence, aggregates
+│   ├── charts.py            # 12 report figures
+│   ├── report.py            # reports/ANALYSIS.md
+│   └── validate.py          # output and model invariants
+├── data/
+│   ├── curated/             # annual 2020–2026 phishing TLD data
+│   ├── reference/           # Public Suffix List
+│   ├── processed/           # committed aggregates and scores
+│   └── raw/                 # downloaded feeds (gitignored)
+├── reports/
+│   ├── ANALYSIS.md          # main analytical report
+│   ├── analysis_data.json   # machine-readable analysis payload
+│   └── figures/             # PNG charts
+├── docs/
+│   ├── METHODOLOGY.md
+│   └── DATA_SOURCES.md
+├── .github/workflows/refresh.yml
+├── Makefile
+└── requirements.txt
+```
 
 ## Data sources
 
@@ -159,18 +226,27 @@ feeds. Source URLs, cadence, extraction notes, and terms are documented in
   confidence.
 - Live feeds over-sample recently reported domains and under-sample stealthy
   infrastructure. Feed overlap is documented in the report.
-- C2 samples are small (218 hosts; 124 registrable domains) and should not be
+- C2 samples are small (219 hosts; 125 registrable domains) and should not be
   used alone for TLD policy.
 - Platform suffixes are excluded from TLD counts by design; blocking a parent
   TLD such as `.dev` would not remove `pages.dev` abuse.
 - TLD-level blocking has high collateral risk; validate business traffic,
   platform concentration, data freshness, and legal constraints first.
 
+## Citing this work
+
+If you use this dataset or analysis, please cite it using
+[`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button will
+also generate APA/BibTeX). Please link back to
+<https://github.com/jejex0/tld-abuse-intel> and note the snapshot date, since
+the data is refreshed continuously.
+
 ## Contributing
 
-Issues and pull requests are welcome, especially corrections to the curated
-annual data, additional public feeds, and improvements to the tier model.
-Please include a source URL and retrieval date for any data change.
+Issues and pull requests are welcome — especially corrections to the curated
+annual data, additional public feeds, and improvements to the tier model. See
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines. Please include a source URL
+and retrieval date for any data change.
 
 ## License
 

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "TLD Abuse Intelligence: Phishing, Payload Delivery, and C2 Infrastructure"
+message: "If you use this dataset or analysis, please cite it and note the snapshot date, as the data is refreshed continuously."
+type: software
+authors:
+  - name: "jejex0"
+repository-code: "https://github.com/jejex0/tld-abuse-intel"
+url: "https://github.com/jejex0/tld-abuse-intel"
+license: MIT
+version: "2026.11.02"
+date-released: "2026-11-02"
+abstract: >-
+  A reproducible, source-attributed ranking of top-level domains by their
+  concentration of phishing, payload/staging, and command-and-control abuse.
+  Combines live feeds, annual registry studies (2020-2026), and Internet Archive
+  history into a four-tier risk model with an independent evidence-confidence
+  score and a blocklist-suitability assessment.
+keywords:
+  - threat intelligence
+  - phishing
+  - DNS security
+  - top-level domains
+  - command and control
+  - malware
+  - blocklist
