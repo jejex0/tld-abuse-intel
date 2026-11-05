@@ -9,7 +9,7 @@
 
 TLD Abuse Intelligence is a reproducible, source-attributed ranking of 67 top-level
 domains by their concentration of **phishing**, **payload/staging**, and
-**command-and-control (C2)** abuse. It combines live feeds, seven years of registry
+**command-and-control (C2)** abuse. It aggregates live feeds, seven years of registry
 studies, and Internet Archive history into a four-tier risk model with a separate
 evidence-confidence score and a blocklist-suitability rating.
 
