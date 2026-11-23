@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-11-16",
-  "generated_at": "2026-11-16T14:35:54+00:00",
+  "snapshot_date": "2026-11-23",
+  "generated_at": "2026-11-23T17:13:29+00:00",
   "psl": {
     "path": "data/reference/public_suffix_list.dat",
     "sha256": "1f96bae40adfc22ca2474d7c0099bbcfcb25aefd3e2547b5c2147c0dd2e3ebd9"
@@ -12,12 +12,12 @@
       "format": "urls",
       "url": "https://openphish.com/feed.txt",
       "license": "OpenPhish public/community feed; see https://openphish.com/",
-      "path": "data/raw/2026-11-16/openphish.txt",
-      "fetched_at": "2026-11-16T14:35:55+00:00",
-      "bytes": 18086,
-      "sha256": "2e59abd7d633e1df55953e290b409e0586d41f997b5f5d13c81001a95a577e4a",
+      "path": "data/raw/2026-11-23/openphish.txt",
+      "fetched_at": "2026-11-23T17:13:30+00:00",
+      "bytes": 14762,
+      "sha256": "5711deadfde6e54165863bc1b4caec14de764014ee7a47a649dd4912c53f3bfd",
       "lines": 300,
-      "unique_hosts": 266,
+      "unique_hosts": 278,
       "error": null
     },
     {
@@ -26,12 +26,12 @@
       "format": "domains",
       "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
       "license": "See https://phishing.army/",
-      "path": "data/raw/2026-11-16/phishing_army.txt",
-      "fetched_at": "2026-11-16T14:35:56+00:00",
-      "bytes": 3127952,
-      "sha256": "1cf3a92f05aadc8e68c2a8089dc9ac90bcfb73a122424c3d780de8f45c280922",
-      "lines": 144448,
-      "unique_hosts": 144415,
+      "path": "data/raw/2026-11-23/phishing_army.txt",
+      "fetched_at": "2026-11-23T17:13:30+00:00",
+      "bytes": 3172611,
+      "sha256": "8f9e8526288bfe96104e3679995b118463326604f102c3a5a499dfc9abc3410a",
+      "lines": 146133,
+      "unique_hosts": 146100,
       "error": null
     },
     {
@@ -40,8 +40,8 @@
       "format": "domains",
       "url": "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt",
       "license": "See https://github.com/mitchellkrogza/Phishing.Database",
-      "path": "data/raw/2026-11-16/phishing_database.txt",
-      "fetched_at": "2026-11-16T14:35:57+00:00",
+      "path": "data/raw/2026-11-23/phishing_database.txt",
+      "fetched_at": "2026-11-23T17:13:31+00:00",
       "bytes": 11023128,
       "sha256": "70c6c2e24e6b3484e7ace27b079723e55937bc1f4cbd98bea38a472ec8e37326",
       "lines": 392178,
@@ -54,8 +54,8 @@
       "format": "domains",
       "url": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "license": "See https://github.com/Spam404/lists",
-      "path": "data/raw/2026-11-16/spam404.txt",
-      "fetched_at": "2026-11-16T14:35:57+00:00",
+      "path": "data/raw/2026-11-23/spam404.txt",
+      "fetched_at": "2026-11-23T17:13:31+00:00",
       "bytes": 146593,
       "sha256": "99c65c4a7bcbab03cb82b1068d39a3e43dd65b51ce7b089929261a818b520960",
       "lines": 8140,
@@ -68,12 +68,12 @@
       "format": "domains",
       "url": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-domains.txt",
       "license": "CC0-1.0 via https://gitlab.com/malware-filter/phishing-filter",
-      "path": "data/raw/2026-11-16/phishing_filter.txt",
-      "fetched_at": "2026-11-16T14:35:58+00:00",
-      "bytes": 498843,
-      "sha256": "374f1f52f82c32237cefe84d614730ca19882fdae31a8e938306296edc7ba064",
-      "lines": 17956,
-      "unique_hosts": 17895,
+      "path": "data/raw/2026-11-23/phishing_filter.txt",
+      "fetched_at": "2026-11-23T17:13:32+00:00",
+      "bytes": 459367,
+      "sha256": "7850b02faf2bb8289fe36ed4017b97d9a0a2fce4f64070c37a75d851d4594c65",
+      "lines": 16646,
+      "unique_hosts": 16588,
       "error": null
     },
     {
@@ -82,12 +82,12 @@
       "format": "domains",
       "url": "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-domains.txt",
       "license": "CC0-1.0 via https://gitlab.com/malware-filter/urlhaus-filter; source data URLhaus",
-      "path": "data/raw/2026-11-16/urlhaus_filter.txt",
-      "fetched_at": "2026-11-16T14:35:58+00:00",
-      "bytes": 280436,
-      "sha256": "5da4f1e59af2e69d0244e452ea2ad14641366a367de4789b1cfc48e0e0d8a8cd",
-      "lines": 18536,
-      "unique_hosts": 2079,
+      "path": "data/raw/2026-11-23/urlhaus_filter.txt",
+      "fetched_at": "2026-11-23T17:13:32+00:00",
+      "bytes": 287415,
+      "sha256": "52fc4daca25cc249c06fa4ec9e5361274a31dfebedd5bb643ad0ae843d80275f",
+      "lines": 19083,
+      "unique_hosts": 2140,
       "error": null
     },
     {
@@ -96,12 +96,12 @@
       "format": "csv_domain",
       "url": "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2s-30day-filter-abused.csv",
       "license": "See https://github.com/drb-ra/C2IntelFeeds",
-      "path": "data/raw/2026-11-16/c2intel_30d.csv",
-      "fetched_at": "2026-11-16T14:35:58+00:00",
-      "bytes": 4267,
-      "sha256": "cf1f93e3deab43f94003ef13ada136a43f461f51da1eb42a17a194174dd85d3c",
-      "lines": 77,
-      "unique_hosts": 76,
+      "path": "data/raw/2026-11-23/c2intel_30d.csv",
+      "fetched_at": "2026-11-23T17:13:32+00:00",
+      "bytes": 4303,
+      "sha256": "c40740ff7d604978ecfb3547a62169cd1b825c2196db6c139bc6b574351f4c00",
+      "lines": 78,
+      "unique_hosts": 77,
       "error": null
     },
     {
@@ -110,12 +110,12 @@
       "format": "csv_domain",
       "url": "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2s-90day-filter-abused.csv",
       "license": "See https://github.com/drb-ra/C2IntelFeeds",
-      "path": "data/raw/2026-11-16/c2intel_90d.csv",
-      "fetched_at": "2026-11-16T14:35:58+00:00",
-      "bytes": 11408,
-      "sha256": "3c6487a77b8e07ec273da9b8adf0fa6e0e5e342e6556e6cf256f7cca48e62809",
-      "lines": 202,
-      "unique_hosts": 199,
+      "path": "data/raw/2026-11-23/c2intel_90d.csv",
+      "fetched_at": "2026-11-23T17:13:32+00:00",
+      "bytes": 11014,
+      "sha256": "889124fc79d178237d2696df40d4a53e0e14fd4a052f18336a73ed5de88c94c8",
+      "lines": 196,
+      "unique_hosts": 193,
       "error": null
     },
     {
@@ -124,41 +124,41 @@
       "format": "csv_domain",
       "url": "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/DNSC2Domains.csv",
       "license": "See https://github.com/drb-ra/C2IntelFeeds",
-      "path": "data/raw/2026-11-16/c2intel_dns.csv",
-      "fetched_at": "2026-11-16T14:35:59+00:00",
-      "bytes": 1982,
-      "sha256": "6f2890025805a38baaaa78a08648430ee6e3c8e29a5b88195d2a981b9c05aaaf",
-      "lines": 18,
-      "unique_hosts": 17,
+      "path": "data/raw/2026-11-23/c2intel_dns.csv",
+      "fetched_at": "2026-11-23T17:13:32+00:00",
+      "bytes": 1893,
+      "sha256": "79f3066dcbaf3cde133156b83353a065d513061ce32fe0c29b037e1cacbda31b",
+      "lines": 17,
+      "unique_hosts": 16,
       "error": null
     }
   ],
   "tranco": {
     "url": "https://tranco-list.eu/top-1m.csv.zip",
-    "fetched_at": "2026-11-16T14:36:05+00:00",
-    "sha256": "a2113e437f1c80edb8101ad55f5b8725c7f230b98ed50482aba598ea5b58fefb",
-    "domains": 999014,
-    "tlds": 1025
+    "fetched_at": "2026-11-23T17:13:36+00:00",
+    "sha256": "7591e81e3d9150b7cb72b53c9aa92d887f43c835dbbaeb8bc693d94eff172cbf",
+    "domains": 999000,
+    "tlds": 1026
   },
   "errors": [],
   "feed_summary": [
     {
       "source": "openphish",
       "kind": "phishing",
-      "unique_hosts": 266,
-      "registered_hosts": 52,
-      "platform_hosts": 214,
-      "tlds_observed": 24,
-      "platforms_observed": 12
+      "unique_hosts": 278,
+      "registered_hosts": 95,
+      "platform_hosts": 183,
+      "tlds_observed": 32,
+      "platforms_observed": 15
     },
     {
       "source": "phishing_army",
       "kind": "phishing",
-      "unique_hosts": 144415,
-      "registered_hosts": 129234,
-      "platform_hosts": 15181,
-      "tlds_observed": 318,
-      "platforms_observed": 217
+      "unique_hosts": 146100,
+      "registered_hosts": 131232,
+      "platform_hosts": 14868,
+      "tlds_observed": 321,
+      "platforms_observed": 208
     },
     {
       "source": "phishing_database",
@@ -181,46 +181,46 @@
     {
       "source": "phishing_filter",
       "kind": "phishing",
-      "unique_hosts": 17895,
-      "registered_hosts": 9912,
-      "platform_hosts": 7983,
-      "tlds_observed": 239,
-      "platforms_observed": 154
+      "unique_hosts": 16588,
+      "registered_hosts": 9125,
+      "platform_hosts": 7463,
+      "tlds_observed": 243,
+      "platforms_observed": 142
     },
     {
       "source": "urlhaus_filter",
       "kind": "payload",
-      "unique_hosts": 2079,
-      "registered_hosts": 1828,
-      "platform_hosts": 251,
-      "tlds_observed": 167,
+      "unique_hosts": 2140,
+      "registered_hosts": 1878,
+      "platform_hosts": 262,
+      "tlds_observed": 168,
       "platforms_observed": 33
     },
     {
       "source": "c2intel_30d",
       "kind": "c2",
-      "unique_hosts": 76,
-      "registered_hosts": 73,
-      "platform_hosts": 3,
-      "tlds_observed": 17,
-      "platforms_observed": 3
+      "unique_hosts": 77,
+      "registered_hosts": 71,
+      "platform_hosts": 6,
+      "tlds_observed": 19,
+      "platforms_observed": 4
     },
     {
       "source": "c2intel_90d",
       "kind": "c2",
-      "unique_hosts": 199,
-      "registered_hosts": 184,
-      "platform_hosts": 15,
+      "unique_hosts": 193,
+      "registered_hosts": 174,
+      "platform_hosts": 19,
       "tlds_observed": 35,
-      "platforms_observed": 11
+      "platforms_observed": 13
     },
     {
       "source": "c2intel_dns",
       "kind": "c2",
-      "unique_hosts": 17,
-      "registered_hosts": 17,
+      "unique_hosts": 16,
+      "registered_hosts": 16,
       "platform_hosts": 0,
-      "tlds_observed": 8,
+      "tlds_observed": 9,
       "platforms_observed": 0
     }
   ]

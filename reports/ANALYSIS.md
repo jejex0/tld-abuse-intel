@@ -1,7 +1,7 @@
 # TLD Abuse Intelligence: Phishing, Payload Delivery, and C2 Infrastructure
 
-**Generated:** 2026-11-16T14:37:12+00:00  
-**Current snapshot:** 2026-11-16  
+**Generated:** 2026-11-23T17:14:32+00:00  
+**Current snapshot:** 2026-11-23  
 **Annual data window:** 2020–2026 (interrupted/partial for some early years)  
 **Payload history:** 11 archived URLhaus snapshots, 2023-03-15 → 2026-07-10  
 **C2 history:** 2 archived C2Intel snapshots, 2025-08-15 and 2025-09-20; current 90-day feed
@@ -14,8 +14,8 @@
 
 ## Executive summary
 
-We combined **540,588 live phishing hostnames** (274,869 unique registrable domains)
-from five independent feeds, **2,079 payload-delivery hosts**, **216 C2 hosts**,
+We combined **542,329 live phishing hostnames** (276,484 unique registrable domains)
+from five independent feeds, **2,140 payload-delivery hosts**, **209 C2 hosts**,
 seven years of Interisle / Cybercrime Information Center registry data, and archived payload/C2
 snapshots. The result is a reproducible, source-attributed ranking of **66 TLDs** across
 four risk tiers.
@@ -26,7 +26,7 @@ four risk tiers.
 
 ### Key findings
 
-1. **The top five risk-ranked namespaces are `.top`, `.icu`, `.cfd`, `.xin`, `.win`.** These combine extreme abuse density,
+1. **The top five risk-ranked namespaces are `.top`, `.icu`, `.cfd`, `.xin`, `.pro`.** These combine extreme abuse density,
    material volume, and/or near-total attacker registration. Ten of the eleven Critical TLDs are
    new gTLDs; the exception is the legacy `.pro` namespace.
 2. **`.top` is the single most consistent high-scale abuser.** It ranks #2 by annual phishing
@@ -54,17 +54,17 @@ four risk tiers.
    8,672.5% (534 → 46,845 domains).
    The `.jp` jump is an outlier that warrants validation rather than immediate blanket action.
 6. **Free hosting and dynamic DNS are a TLD-scale problem in their own right.**
-   **26.1%** of live phishing hosts (141,320 of 540,588) sit on
+   **26.0%** of live phishing hosts (141,111 of 542,329) sit on
    private platform suffixes, not registrable TLD domains. The largest are `duckdns.org` (16,936),
    `pages.dev` (14,538), `webflow.io` (11,940), `vercel.app` (11,566), and `github.io` (7,723).
    These are excluded from TLD risk counts to avoid unfairly inflating `.dev`, `.app`, `.io`, and `.org`.
 7. **Payload delivery is concentrated in `.com`, but the high-density tail matters more for blocking.**
-   `.com` accounts for **38.9%** of current URLhaus registered payload domains
-   (621 of 1,595). The next tier is `.net` (80), `.org` (58),
+   `.com` accounts for **38.4%** of current URLhaus registered payload domains
+   (624 of 1,625). The next tier is `.net` (80), `.org` (58),
    `.cc` (32), `.top` (29), `.xyz` (27), `.win` (24), and `.lol` (21). Platform payload hosting is led by
    `r2.dev` (76), `workers.dev` (34), `pages.dev` (23), and `vercel.app` (20).
-8. **C2 data is small but useful as a supporting signal.** The current union has 216 hosts
-   (201 non-platform hostnames / 121 unique registrable domains), led by `.com` (49), `.top` (13), `.net` (6), `.cn` (5), and `.shop` (5).
+8. **C2 data is small but useful as a supporting signal.** The current union has 209 hosts
+   (190 non-platform hostnames / 117 unique registrable domains), led by `.com` (49), `.top` (13), `.net` (6), `.cn` (5), and `.shop` (5).
    Historical C2 snapshots are too sparse for trend claims. C2 infrastructure frequently uses popular
    TLDs and compromised hosts, so TLD blocking is not a C2 strategy.
 9. **Historical persistence separates durable abuse from one-year spikes.** `.com`, `.top`, `.xyz`, and
@@ -72,7 +72,7 @@ four risk tiers.
    Freenom's registration freeze means today's `.tk`/`.ml`/`.ga`/`.cf`/`.gq` abuse is mostly legacy
    infrastructure. `.icu`, `.pro`, `.win`, and `.help` are surge entrants with sudden 2026 scale.
 10. **Feed overlap is low; the union is justified.** Pairwise Jaccard overlap between phishing feeds is
-    as low as 0.00% and at most 9.73%. OpenPhish is mostly contained
+    as low as 0.00% and at most 8.76%. OpenPhish is mostly contained
     in Phishing Army (97.2% containment) but adds freshness; Phishing.Database and Spam404 contribute
     largely disjoint domain sets.
 
@@ -98,20 +98,20 @@ four risk tiers.
 
 | Source | Kind | Unique hosts | Non-platform hosts | Platform hosts | TLDs observed |
 |---|---|---:|---:|---:|---:|
-| `openphish` | phishing | 266 | 52 | 214 | 24 |
-| `phishing_army` | phishing | 144,415 | 129,234 | 15,181 | 318 |
+| `openphish` | phishing | 278 | 95 | 183 | 32 |
+| `phishing_army` | phishing | 146,100 | 131,232 | 14,868 | 321 |
 | `phishing_database` | phishing | 386,094 | 259,520 | 126,574 | 553 |
 | `spam404` | phishing | 8,140 | 8,115 | 25 | 115 |
-| `phishing_filter` | phishing | 17,895 | 9,912 | 7,983 | 239 |
-| `urlhaus_filter` | payload | 2,079 | 1,828 | 251 | 167 |
-| `c2intel_30d` | c2 | 76 | 73 | 3 | 17 |
-| `c2intel_90d` | c2 | 199 | 184 | 15 | 35 |
-| `c2intel_dns` | c2 | 17 | 17 | 0 | 8 |
+| `phishing_filter` | phishing | 16,588 | 9,125 | 7,463 | 243 |
+| `urlhaus_filter` | payload | 2,140 | 1,878 | 262 | 168 |
+| `c2intel_30d` | c2 | 77 | 71 | 6 | 19 |
+| `c2intel_90d` | c2 | 193 | 174 | 19 | 35 |
+| `c2intel_dns` | c2 | 16 | 16 | 0 | 9 |
 
-The live union contains **540,588 phishing hostnames** and **274,869 unique
+The live union contains **542,329 phishing hostnames** and **276,484 unique
 registrable phishing domains**. The difference is subdomain reuse: many hostnames collapse to the
-same registrable domain. Of the live phishing hosts, **399,268** are non-platform
-hostnames and **141,320** are platform hosts. Payload and C2 feeds are analyzed separately.
+same registrable domain. Of the live phishing hosts, **401,218** are non-platform
+hostnames and **141,111** are platform hosts. Payload and C2 feeds are analyzed separately.
 
 **Feed design choices:**
 
@@ -175,22 +175,22 @@ namespace, not on registered `.dev` domains.
 
 | Feed A | Feed B | Hosts A | Hosts B | Intersection | Jaccard | Containment |
 |---|---|---:|---:|---:|---:|---:|
-| phishing_army | phishing_filter | 144,415 | 17,895 | 14,388 | 9.73% | 80.40% |
-| openphish | phishing_filter | 266 | 17,895 | 243 | 1.36% | 91.35% |
-| phishing_database | phishing_filter | 386,094 | 17,895 | 1,466 | 0.36% | 8.19% |
-| phishing_army | phishing_database | 144,415 | 386,094 | 988 | 0.19% | 0.68% |
-| openphish | phishing_army | 266 | 144,415 | 262 | 0.18% | 98.50% |
-| openphish | phishing_database | 266 | 386,094 | 2 | 0.00% | 0.75% |
-| openphish | spam404 | 266 | 8,140 | 0 | 0.00% | 0.00% |
-| phishing_army | spam404 | 144,415 | 8,140 | 0 | 0.00% | 0.00% |
+| phishing_army | phishing_filter | 146,100 | 16,588 | 13,110 | 8.76% | 79.03% |
+| openphish | phishing_filter | 278 | 16,588 | 237 | 1.43% | 85.25% |
+| phishing_database | phishing_filter | 386,094 | 16,588 | 1,391 | 0.35% | 8.39% |
+| openphish | phishing_army | 278 | 146,100 | 260 | 0.18% | 93.53% |
+| phishing_army | phishing_database | 146,100 | 386,094 | 913 | 0.17% | 0.62% |
+| openphish | phishing_database | 278 | 386,094 | 5 | 0.00% | 1.80% |
+| openphish | spam404 | 278 | 8,140 | 0 | 0.00% | 0.00% |
+| phishing_army | spam404 | 146,100 | 8,140 | 0 | 0.00% | 0.00% |
 | phishing_database | spam404 | 386,094 | 8,140 | 7 | 0.00% | 0.09% |
-| spam404 | phishing_filter | 8,140 | 17,895 | 0 | 0.00% | 0.00% |
+| spam404 | phishing_filter | 8,140 | 16,588 | 0 | 0.00% | 0.00% |
 
-Pairwise Jaccard overlap ranges from 0.00% to 9.73%. OpenPhish is
-mostly contained in Phishing Army (98.5%
+Pairwise Jaccard overlap ranges from 0.00% to 8.76%. OpenPhish is
+mostly contained in Phishing Army (93.5%
 containment), while Phishing.Database and Spam404 are largely disjoint. Phishing Army and the
-malware-filter phishing mirror overlap by 9.73%
-(Jaccard), and Phishing.Database adds only 8.2%
+malware-filter phishing mirror overlap by 8.76%
+(Jaccard), and Phishing.Database adds only 8.4%
 containment with the filter. The union is therefore justified: no single feed is a superset of the
 others, and the low overlap increases coverage while keeping duplicates manageable.
 
@@ -288,21 +288,21 @@ A Critical/high tier with Low confidence is a **watchlist item**, not a confirme
 
 | TLD | Annual phishing domains | Density/10k | Malicious share | Live domains | Tier | Confidence |
 |---|---:|---:|---:|---:|---|---|
-| `.com` | 869,180 | 53.7 | 66.5% | 105,529 | High | High |
-| `.top` | 375,514 | 596.1 | 79.2% | 9,113 | Critical | High |
-| `.cn` | 167,651 | 135.7 | 39.3% | 3,091 | High | High |
-| `.pro` | 130,945 | 1,200.1 | 84.5% | 2,392 | Critical | High |
-| `.info` | 99,602 | 189.7 | 71.8% | 5,762 | High | High |
-| `.xyz` | 93,987 | 118.2 | 84.5% | 6,943 | High | High |
-| `.vip` | 83,816 | 501.0 | 95.1% | 1,745 | Critical | High |
-| `.shop` | 79,625 | 202.0 | 60.9% | 14,961 | High | High |
-| `.cc` | 77,660 | 319.4 | 93.0% | 3,736 | High | High |
-| `.icu` | 74,786 | 1,607.0 | 95.0% | 1,985 | Critical | High |
-| `.cfd` | 70,944 | 1,387.4 | 95.1% | 2,931 | Critical | High |
-| `.sbs` | 63,518 | 463.5 | 94.0% | 5,924 | High | High |
-| `.net` | 56,360 | 46.2 | 69.4% | 10,691 | High | High |
-| `.online` | 47,376 | 142.8 | 80.6% | 2,357 | High | High |
-| `.jp` | 46,845 | 259.6 | 74.0% | 293 | High | Medium |
+| `.com` | 869,180 | 53.7 | 66.5% | 105,620 | High | High |
+| `.top` | 375,514 | 596.1 | 79.2% | 9,144 | Critical | High |
+| `.cn` | 167,651 | 135.7 | 39.3% | 3,090 | High | High |
+| `.pro` | 130,945 | 1,200.1 | 84.5% | 2,527 | Critical | High |
+| `.info` | 99,602 | 189.7 | 71.8% | 5,639 | High | High |
+| `.xyz` | 93,987 | 118.2 | 84.5% | 6,901 | High | High |
+| `.vip` | 83,816 | 501.0 | 95.1% | 1,742 | Critical | High |
+| `.shop` | 79,625 | 202.0 | 60.9% | 15,065 | High | High |
+| `.cc` | 77,660 | 319.4 | 93.0% | 3,711 | High | High |
+| `.icu` | 74,786 | 1,607.0 | 95.0% | 1,971 | Critical | High |
+| `.cfd` | 70,944 | 1,387.4 | 95.1% | 3,059 | Critical | High |
+| `.sbs` | 63,518 | 463.5 | 94.0% | 6,104 | High | High |
+| `.net` | 56,360 | 46.2 | 69.4% | 10,712 | High | High |
+| `.online` | 47,376 | 142.8 | 80.6% | 2,352 | High | High |
+| `.jp` | 46,845 | 259.6 | 74.0% | 290 | High | Medium |
 
 ![Top TLDs by density](figures/fig02_top_density_2026.png)
 
@@ -310,21 +310,21 @@ A Critical/high tier with Low confidence is a **watchlist item**, not a confirme
 
 | TLD | Density/10k | Annual domains | Malicious share | Persistence | Live domains | Tier |
 |---|---:|---:|---:|---:|---:|---|
-| `.xin` | 5,910.0 | 35,077 | 95.6% | 2/7 | 266 | Critical |
+| `.xin` | 5,910.0 | 35,077 | 95.6% | 2/7 | 265 | Critical |
 | `.win` | 1,640.7 | 18,626 | 74.0% | 2/7 | 111 | Critical |
-| `.icu` | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,985 | Critical |
-| `.garden` | 1,567.7 | 10,340 | 74.0% | 1/7 | 23 | Critical |
-| `.cfd` | 1,387.4 | 70,944 | 95.1% | 2/7 | 2,931 | Critical |
-| `.pro` | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,392 | Critical |
-| `.help` | 1,058.5 | 18,715 | 74.0% | 2/7 | 752 | Critical |
-| `.mom` | 996.9 | 5,728 | 74.0% | 1/7 | 1,000 | High |
-| `.rest` | 981.0 | 7,774 | 74.0% | 2/7 | 472 | High |
+| `.icu` | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,971 | Critical |
+| `.garden` | 1,567.7 | 10,340 | 74.0% | 1/7 | 21 | Critical |
+| `.cfd` | 1,387.4 | 70,944 | 95.1% | 2/7 | 3,059 | Critical |
+| `.pro` | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,527 | Critical |
+| `.help` | 1,058.5 | 18,715 | 74.0% | 2/7 | 757 | Critical |
+| `.mom` | 996.9 | 5,728 | 74.0% | 1/7 | 996 | High |
+| `.rest` | 981.0 | 7,774 | 74.0% | 2/7 | 489 | High |
 | `.mobi` | 845.1 | 33,424 | 90.5% | 1/7 | 97 | High |
-| `.qpon` | 819.8 | 5,941 | 74.0% | 0/7 | 387 | High |
-| `.live` | 739.8 | 41,523 | 90.4% | 3/7 | 5,648 | High |
-| `.ink` | 718.4 | 7,980 | 74.0% | 0/7 | 256 | High |
-| `.best` | 706.6 | 2,563 | 74.0% | 3/7 | 102 | High |
-| `.lat` | 664.5 | 9,137 | 74.0% | 0/7 | 1,176 | High |
+| `.qpon` | 819.8 | 5,941 | 74.0% | 0/7 | 386 | High |
+| `.live` | 739.8 | 41,523 | 90.4% | 3/7 | 5,712 | High |
+| `.ink` | 718.4 | 7,980 | 74.0% | 0/7 | 246 | High |
+| `.best` | 706.6 | 2,563 | 74.0% | 3/7 | 125 | High |
+| `.lat` | 664.5 | 9,137 | 74.0% | 0/7 | 1,136 | High |
 
 ![Risk matrix](figures/fig03_risk_matrix.png)
 
@@ -347,8 +347,8 @@ A Critical/high tier with Low confidence is a **watchlist item**, not a confirme
 
 ### 3.4 What stands out
 
-- **Live phishing is highly concentrated.** The top three TLDs account for **47.7%** of unique
-  registrable live phishing domains; the top ten account for **64.0%**. Concentration at this
+- **Live phishing is highly concentrated.** The top three TLDs account for **47.5%** of unique
+  registrable live phishing domains; the top ten account for **63.7%**. Concentration at this
   level means a small number of namespaces drive most of the operational workload.
 - **Volume ≠ density.** `.com` has 869,180 phishing domains but a
   density of 53.7/10k. `.xin` has only
@@ -375,7 +375,7 @@ A Critical/high tier with Low confidence is a **watchlist item**, not a confirme
   measurement/reporting change, or a large compromised footprint. It is ranked High with
   Medium confidence and flagged for validation.
 - **`.shop` is a live-feed leader but less attacker-registered than peers.** It is #2 in live
-  registrable phishing domains (14,961), but its annual
+  registrable phishing domains (15,065), but its annual
   malicious-registration share is 60.9%, lower than the
   extreme tier. It remains High risk because of volume and density
   (202.0/10k).
@@ -481,18 +481,18 @@ it is not a pure C2 feed and includes compromised legitimate sites.
 
 | TLD | Payload domains | Share of payload | Over-representation | Tier | Confidence |
 |---|---:|---:|---:|---|---|
-| `.com` | 621 | 38.93% | 0.9 | High | High |
-| `.net` | 87 | 5.45% | 1.2 | High | High |
-| `.org` | 61 | 3.82% | 0.9 | Medium | Medium |
-| `.cc` | 45 | 2.82% | 4.2 | High | High |
-| `.top` | 43 | 2.70% | 5.3 | Critical | High |
-| `.de` | 35 | 2.19% | 0.7 | Low | Medium |
-| `.xyz` | 30 | 1.88% | 2.3 | High | High |
-| `.win` | 25 | 1.57% | 20.2 | Critical | Medium |
-| `.br` | 24 | 1.50% | 1.0 | Medium | Medium |
-| `.shop` | 22 | 1.38% | 2.4 | High | High |
-| `.cn` | 21 | 1.32% | 1.2 | High | High |
-| `.lol` | 20 | 1.25% | 13.5 | Critical | Medium |
+| `.com` | 624 | 38.40% | 0.9 | High | High |
+| `.net` | 89 | 5.48% | 1.2 | High | High |
+| `.org` | 62 | 3.82% | 0.9 | Medium | Medium |
+| `.top` | 51 | 3.14% | 6.4 | Critical | High |
+| `.cc` | 50 | 3.08% | 4.6 | High | High |
+| `.de` | 35 | 2.15% | 0.7 | Low | Medium |
+| `.xyz` | 32 | 1.97% | 2.5 | High | High |
+| `.win` | 25 | 1.54% | 21.1 | Critical | Medium |
+| `.br` | 24 | 1.48% | 1.0 | Medium | Medium |
+| `.cn` | 23 | 1.42% | 1.2 | High | High |
+| `.icu` | 19 | 1.17% | 26.1 | Critical | High |
+| `.lol` | 19 | 1.17% | 13.1 | Critical | Medium |
 
 ![Payload platforms](figures/fig06_payload_platforms.png)
 
@@ -512,7 +512,7 @@ it is not a pure C2 feed and includes compromised legitimate sites.
 | `.garden` | 360 | 360 | 2026-07-10 | 360 | 2026-07-10 → 2026-07-10 |
 
 - **`.com` is the durable payload host.** It accounts for the largest total across snapshots and
-  38.9% of current registered payload domains. It is also the most common
+  38.4% of current registered payload domains. It is also the most common
   legitimate TLD, so this is exposure, not a reason to block.
 - **The `.ru` “spike” is mostly subdomains.** The 2025-12-16 archived URLhaus list contained 10,513
   `.ru` hostnames but only 2,779 unique registrable `.ru` domains. This is a subdomain-heavy
@@ -540,16 +540,16 @@ and TLD policy. TLD blocking alone is too coarse and misses popular-TLD hosting.
 
 | TLD | C2 domains | Share | Over-representation | Tier | Confidence |
 |---|---:|---:|---:|---|---|
-| `.com` | 46 | 38.02% | 0.9 | High | High |
-| `.top` | 12 | 9.92% | 19.5 | Critical | High |
-| `.net` | 7 | 5.79% | 1.3 | High | High |
-| `.cn` | 5 | 4.13% | 3.8 | High | High |
-| `.shop` | 5 | 4.13% | 7.2 | High | High |
-| `.xyz` | 4 | 3.31% | 4.0 | High | High |
-| `.online` | 4 | 3.31% | 6.7 | High | High |
-| `.click` | 3 | 2.48% | 18.6 | High | High |
-| `.site` | 3 | 2.48% | 6.4 | High | Medium |
-| `.help` | 2 | 1.65% | 106.5 | Critical | Medium |
+| `.com` | 44 | 37.61% | 0.9 | High | High |
+| `.top` | 11 | 9.40% | 19.0 | Critical | High |
+| `.net` | 6 | 5.13% | 1.1 | High | High |
+| `.cn` | 5 | 4.27% | 3.8 | High | High |
+| `.xyz` | 4 | 3.42% | 4.4 | High | High |
+| `.shop` | 4 | 3.42% | 6.7 | High | High |
+| `.online` | 4 | 3.42% | 7.8 | High | High |
+| `.click` | 3 | 2.56% | 21.1 | High | High |
+| `.site` | 3 | 2.56% | 7.8 | High | Medium |
+| `.icu` | 2 | 1.71% | 38.2 | Critical | High |
 
 ### 6.2 Historical C2 snapshots
 
@@ -557,16 +557,16 @@ and TLD policy. TLD blocking alone is too coarse and misses popular-TLD hosting.
 |---|---:|---:|---:|
 | `.com` | 38 | 19 | 2 |
 | `.cn` | 8 | 4 | 2 |
+| `.top` | 6 | 3 | 2 |
 | `.xyz` | 6 | 3 | 2 |
 | `.net` | 6 | 3 | 2 |
 | `.online` | 6 | 3 | 2 |
-| `.top` | 6 | 3 | 2 |
 | `.vip` | 4 | 2 | 2 |
 | `.cc` | 4 | 2 | 2 |
-| `.autos` | 2 | 1 | 2 |
-| `.info` | 2 | 1 | 2 |
+| `.ar` | 2 | 1 | 2 |
+| `.sbs` | 2 | 1 | 2 |
 
-- The current C2 union is **216 hosts** (201 non-platform hostnames / 121 unique
+- The current C2 union is **209 hosts** (190 non-platform hostnames / 117 unique
   registrable domains). This is a small sample;
   a difference of two or three domains should not change a TLD's risk tier.
 - `.com` dominates absolutely, as it does for payload and phishing. `.top`, `.net`, `.cn`, `.shop`,
@@ -585,26 +585,26 @@ and TLD policy. TLD blocking alone is too coarse and misses popular-TLD hosting.
 
 ![Platform abuse](figures/fig08_platform_abuse.png)
 
-**26.1%** of live phishing hostnames are on private platform suffixes. This is a
+**26.0%** of live phishing hostnames are on private platform suffixes. This is a
 separate abuse economy from registered TLDs.
 
 | Platform suffix | Parent TLD | Live phishing hosts | Share of live hosts | Payload hosts | C2 hosts |
 |---|---|---:|---:|---:|---:|
-| `duckdns.org` | `.org` | 16,869 | 3.12% | 11 | 0 |
-| `pages.dev` | `.dev` | 14,254 | 2.64% | 24 | 0 |
-| `webflow.io` | `.io` | 11,870 | 2.20% | 0 | 0 |
-| `vercel.app` | `.app` | 11,444 | 2.12% | 22 | 0 |
-| `github.io` | `.io` | 7,670 | 1.42% | 4 | 0 |
+| `duckdns.org` | `.org` | 16,854 | 3.11% | 13 | 0 |
+| `pages.dev` | `.dev` | 14,177 | 2.61% | 29 | 0 |
+| `webflow.io` | `.io` | 11,860 | 2.19% | 0 | 0 |
+| `vercel.app` | `.app` | 11,418 | 2.10% | 22 | 0 |
+| `github.io` | `.io` | 7,652 | 1.41% | 8 | 0 |
 | `ey.r.appspot.com` | `.com` | 7,148 | 1.32% | 0 | 0 |
-| `r2.dev` | `.dev` | 6,448 | 1.19% | 73 | 0 |
-| `web.app` | `.app` | 6,277 | 1.16% | 0 | 0 |
-| `workers.dev` | `.dev` | 4,255 | 0.79% | 34 | 0 |
-| `netlify.app` | `.app` | 4,226 | 0.78% | 13 | 0 |
-| `firebaseapp.com` | `.com` | 4,013 | 0.74% | 0 | 0 |
-| `ipfs.dweb.link` | `.link` | 3,637 | 0.67% | 0 | 0 |
-| `square.site` | `.site` | 2,824 | 0.52% | 0 | 0 |
-| `gitbook.io` | `.io` | 2,352 | 0.43% | 0 | 0 |
-| `blogspot.com` | `.com` | 2,253 | 0.42% | 2 | 0 |
+| `r2.dev` | `.dev` | 6,442 | 1.19% | 71 | 0 |
+| `web.app` | `.app` | 6,267 | 1.16% | 0 | 0 |
+| `workers.dev` | `.dev` | 4,253 | 0.78% | 34 | 0 |
+| `netlify.app` | `.app` | 4,195 | 0.77% | 13 | 0 |
+| `firebaseapp.com` | `.com` | 4,008 | 0.74% | 0 | 0 |
+| `ipfs.dweb.link` | `.link` | 3,603 | 0.66% | 0 | 0 |
+| `square.site` | `.site` | 2,837 | 0.52% | 0 | 0 |
+| `gitbook.io` | `.io` | 2,355 | 0.43% | 0 | 0 |
+| `blogspot.com` | `.com` | 2,215 | 0.41% | 2 | 0 |
 
 - `duckdns.org`, `pages.dev`, `webflow.io`, `vercel.app`, `github.io`, `ey.r.appspot.com`,
   `r2.dev`, `web.app`, `netlify.app`, and `workers.dev` are the largest current abuse namespaces.
@@ -669,17 +669,17 @@ should be handled at the domain level.
 
 | Rank | TLD | Category | Tier | Score | Confidence | Density/10k | Annual domains | Malicious share | Persistence | Live domains | Payload / C2 | Blocklist suitability | Action |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `.top` | new gTLD | Critical | 73.3 | High | 596.1 | 375,514 | 79.2% | 6/7 | 9,113 | 43 / 12 | Medium | Constrained blocklist |
-| 2 | `.icu` | new gTLD | Critical | 67.2 | High | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,985 | 15 / 1 | High | TLD blocklist candidate |
-| 3 | `.cfd` | new gTLD | Critical | 66.0 | High | 1,387.4 | 70,944 | 95.1% | 2/7 | 2,931 | 14 / 0 | High | TLD blocklist candidate |
-| 4 | `.xin` | new gTLD | Critical | 65.0 | High | 5,910.0 | 35,077 | 95.6% | 2/7 | 266 | 0 / 0 | High | TLD blocklist candidate |
-| 5 | `.win` | new gTLD | Critical | 63.8 | Medium | 1,640.7 | 18,626 | 74.0% | 2/7 | 111 | 25 / 1 | High | TLD blocklist candidate |
-| 6 | `.pro` | legacy gTLD | Critical | 63.8 | High | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,392 | 12 / 0 | Medium | Constrained blocklist |
-| 7 | `.cyou` | new gTLD | Critical | 62.1 | High | 661.6 | 29,923 | 95.9% | 2/7 | 5,688 | 6 / 0 | High | TLD blocklist candidate |
-| 8 | `.help` | new gTLD | Critical | 61.7 | Medium | 1,058.5 | 18,715 | 74.0% | 2/7 | 752 | 5 / 2 | High | TLD blocklist candidate |
-| 9 | `.vip` | new gTLD | Critical | 59.0 | High | 501.0 | 83,816 | 95.1% | 1/7 | 1,745 | 6 / 2 | Medium | Constrained blocklist |
-| 10 | `.garden` | new gTLD | Critical | 56.8 | Medium | 1,567.7 | 10,340 | 74.0% | 1/7 | 23 | 0 / 0 | High | TLD blocklist candidate |
-| 11 | `.lol` | new gTLD | Critical | 55.9 | Medium | 468.6 | 24,187 | 95.6% | 1/7 | 759 | 20 / 1 | High | TLD blocklist candidate |
+| 1 | `.top` | new gTLD | Critical | 73.5 | High | 596.1 | 375,514 | 79.2% | 6/7 | 9,144 | 51 / 11 | Medium | Constrained blocklist |
+| 2 | `.icu` | new gTLD | Critical | 68.1 | High | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,971 | 19 / 2 | High | TLD blocklist candidate |
+| 3 | `.cfd` | new gTLD | Critical | 65.8 | High | 1,387.4 | 70,944 | 95.1% | 2/7 | 3,059 | 12 / 0 | High | TLD blocklist candidate |
+| 4 | `.xin` | new gTLD | Critical | 65.0 | High | 5,910.0 | 35,077 | 95.6% | 2/7 | 265 | 0 / 0 | High | TLD blocklist candidate |
+| 5 | `.pro` | legacy gTLD | Critical | 63.9 | High | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,527 | 13 / 0 | Medium | Constrained blocklist |
+| 6 | `.win` | new gTLD | Critical | 63.8 | Medium | 1,640.7 | 18,626 | 74.0% | 2/7 | 111 | 25 / 1 | High | TLD blocklist candidate |
+| 7 | `.cyou` | new gTLD | Critical | 62.1 | High | 661.6 | 29,923 | 95.9% | 2/7 | 5,639 | 6 / 0 | High | TLD blocklist candidate |
+| 8 | `.help` | new gTLD | Critical | 62.0 | Medium | 1,058.5 | 18,715 | 74.0% | 2/7 | 757 | 6 / 2 | High | TLD blocklist candidate |
+| 9 | `.vip` | new gTLD | Critical | 58.8 | High | 501.0 | 83,816 | 95.1% | 1/7 | 1,742 | 5 / 2 | High | TLD blocklist candidate |
+| 10 | `.garden` | new gTLD | Critical | 56.8 | Medium | 1,567.7 | 10,340 | 74.0% | 1/7 | 21 | 0 / 0 | High | TLD blocklist candidate |
+| 11 | `.lol` | new gTLD | Critical | 55.9 | Medium | 468.6 | 24,187 | 95.6% | 1/7 | 747 | 19 / 1 | High | TLD blocklist candidate |
 
 **Why these are Critical:**
 
@@ -702,26 +702,26 @@ Top 20 shown; all 34 are in `data/processed/tld_risk_scores.csv`.
 
 | Rank | TLD | Category | Tier | Score | Confidence | Density/10k | Annual domains | Malicious share | Persistence | Live domains | Payload / C2 | Blocklist suitability | Action |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 12 | `.com` | legacy gTLD | High | 68.2 | High | 53.7 | 869,180 | 66.5% | 7/7 | 105,529 | 621 / 46 | Low | Monitor only |
-| 13 | `.live` | new gTLD | High | 63.7 | High | 739.8 | 41,523 | 90.4% | 3/7 | 5,648 | 14 / 0 | Medium | Constrained blocklist |
-| 14 | `.xyz` | new gTLD | High | 61.6 | High | 118.2 | 93,987 | 84.5% | 6/7 | 6,943 | 30 / 4 | Medium | Monitor only |
-| 15 | `.cn` | ccTLD | High | 60.4 | High | 135.7 | 167,651 | 39.3% | 6/7 | 3,091 | 21 / 5 | Low | Monitor only |
-| 16 | `.cc` | ccTLD | High | 60.0 | High | 319.4 | 77,660 | 93.0% | 1/7 | 3,736 | 45 / 2 | Medium | Constrained blocklist |
-| 17 | `.sbs` | new gTLD | High | 58.8 | High | 463.5 | 63,518 | 94.0% | 1/7 | 5,924 | 10 / 2 | High | TLD blocklist candidate |
-| 18 | `.mobi` | legacy gTLD | High | 57.5 | Medium | 845.1 | 33,424 | 90.5% | 1/7 | 97 | 0 / 0 | High | TLD blocklist candidate |
-| 19 | `.info` | legacy gTLD | High | 57.5 | High | 189.7 | 99,602 | 71.8% | 4/7 | 5,762 | 13 / 2 | Medium | Monitor only |
-| 20 | `.rest` | new gTLD | High | 57.4 | Medium | 981.0 | 7,774 | 74.0% | 2/7 | 472 | 1 / 0 | High | TLD blocklist candidate |
-| 21 | `.shop` | new gTLD | High | 56.5 | High | 202.0 | 79,625 | 60.9% | 4/7 | 14,961 | 22 / 5 | Medium | Constrained blocklist |
-| 22 | `.best` | new gTLD | High | 55.0 | Medium | 706.6 | 2,563 | 74.0% | 3/7 | 102 | 3 / 0 | High | TLD blocklist candidate |
-| 23 | `.click` | new gTLD | High | 54.7 | High | 492.7 | 35,653 | 90.2% | 0/7 | 3,579 | 4 / 3 | High | TLD blocklist candidate |
-| 24 | `.mom` | new gTLD | High | 53.9 | Medium | 996.9 | 5,728 | 74.0% | 1/7 | 1,000 | 1 / 0 | High | TLD blocklist candidate |
-| 25 | `.lat` | new gTLD | High | 53.9 | Medium | 664.5 | 9,137 | 74.0% | 0/7 | 1,176 | 5 / 1 | High | TLD blocklist candidate |
-| 26 | `.bond` | new gTLD | High | 53.9 | High | 362.8 | 41,594 | 99.0% | 2/7 | 429 | 1 / 1 | High | TLD blocklist candidate |
-| 27 | `.qpon` | new gTLD | High | 53.3 | Medium | 819.8 | 5,941 | 74.0% | 0/7 | 387 | 4 / 0 | High | TLD blocklist candidate |
-| 28 | `.net` | legacy gTLD | High | 52.9 | High | 46.2 | 56,360 | 69.4% | 4/7 | 10,691 | 87 / 7 | Low | Monitor only |
-| 29 | `.life` | new gTLD | High | 52.5 | Medium | 525.9 | 21,836 | 74.0% | 0/7 | 464 | 11 / 0 | High | TLD blocklist candidate |
-| 30 | `.online` | new gTLD | High | 51.8 | High | 142.8 | 47,376 | 80.6% | 2/7 | 2,357 | 15 / 4 | Medium | Constrained blocklist |
-| 31 | `.ink` | new gTLD | High | 51.4 | Medium | 718.4 | 7,980 | 74.0% | 0/7 | 256 | 4 / 0 | High | TLD blocklist candidate |
+| 12 | `.com` | legacy gTLD | High | 68.2 | High | 53.7 | 869,180 | 66.5% | 7/7 | 105,620 | 624 / 44 | Low | Monitor only |
+| 13 | `.live` | new gTLD | High | 63.7 | High | 739.8 | 41,523 | 90.4% | 3/7 | 5,712 | 14 / 0 | High | TLD blocklist candidate |
+| 14 | `.xyz` | new gTLD | High | 61.7 | High | 118.2 | 93,987 | 84.5% | 6/7 | 6,901 | 32 / 4 | Medium | Monitor only |
+| 15 | `.cn` | ccTLD | High | 60.5 | High | 135.7 | 167,651 | 39.3% | 6/7 | 3,090 | 23 / 5 | Low | Monitor only |
+| 16 | `.cc` | ccTLD | High | 60.1 | High | 319.4 | 77,660 | 93.0% | 1/7 | 3,711 | 50 / 2 | Medium | Constrained blocklist |
+| 17 | `.sbs` | new gTLD | High | 58.9 | High | 463.5 | 63,518 | 94.0% | 1/7 | 6,104 | 11 / 2 | High | TLD blocklist candidate |
+| 18 | `.info` | legacy gTLD | High | 57.7 | High | 189.7 | 99,602 | 71.8% | 4/7 | 5,639 | 15 / 2 | Medium | Monitor only |
+| 19 | `.mobi` | legacy gTLD | High | 57.5 | Medium | 845.1 | 33,424 | 90.5% | 1/7 | 97 | 0 / 0 | High | TLD blocklist candidate |
+| 20 | `.rest` | new gTLD | High | 57.3 | Medium | 981.0 | 7,774 | 74.0% | 2/7 | 489 | 1 / 0 | High | TLD blocklist candidate |
+| 21 | `.shop` | new gTLD | High | 56.0 | High | 202.0 | 79,625 | 60.9% | 4/7 | 15,065 | 18 / 4 | Medium | Constrained blocklist |
+| 22 | `.best` | new gTLD | High | 55.0 | Medium | 706.6 | 2,563 | 74.0% | 3/7 | 125 | 3 / 0 | High | TLD blocklist candidate |
+| 23 | `.click` | new gTLD | High | 54.8 | High | 492.7 | 35,653 | 90.2% | 0/7 | 3,609 | 4 / 3 | High | TLD blocklist candidate |
+| 24 | `.lat` | new gTLD | High | 54.4 | Medium | 664.5 | 9,137 | 74.0% | 0/7 | 1,136 | 7 / 1 | High | TLD blocklist candidate |
+| 25 | `.mom` | new gTLD | High | 53.9 | Medium | 996.9 | 5,728 | 74.0% | 1/7 | 996 | 1 / 0 | High | TLD blocklist candidate |
+| 26 | `.bond` | new gTLD | High | 53.9 | High | 362.8 | 41,594 | 99.0% | 2/7 | 443 | 1 / 1 | High | TLD blocklist candidate |
+| 27 | `.qpon` | new gTLD | High | 53.3 | Medium | 819.8 | 5,941 | 74.0% | 0/7 | 386 | 4 / 0 | High | TLD blocklist candidate |
+| 28 | `.net` | legacy gTLD | High | 52.8 | High | 46.2 | 56,360 | 69.4% | 4/7 | 10,712 | 89 / 6 | Low | Monitor only |
+| 29 | `.life` | new gTLD | High | 52.5 | Medium | 525.9 | 21,836 | 74.0% | 0/7 | 466 | 11 / 0 | High | TLD blocklist candidate |
+| 30 | `.online` | new gTLD | High | 52.1 | High | 142.8 | 47,376 | 80.6% | 2/7 | 2,352 | 18 / 4 | Medium | Constrained blocklist |
+| 31 | `.ink` | new gTLD | High | 51.4 | Medium | 718.4 | 7,980 | 74.0% | 0/7 | 246 | 4 / 0 | High | TLD blocklist candidate |
 
 **Interpretation:**
 
@@ -737,9 +737,9 @@ Top 20 shown; all 34 are in `data/processed/tld_risk_scores.csv`.
 
 ### 8.4 Medium and Low
 
-**Medium (13):** `.buzz`, `.monster`, `.org`, `.pics`, `.quest`, `.zone`, `.ru`, `.autos`, `.digital`, `.store`, `.id`, `.br`, `.pl`.
+**Medium (13):** `.buzz`, `.monster`, `.org`, `.pics`, `.quest`, `.zone`, `.ru`, `.autos`, `.store`, `.digital`, `.id`, `.br`, `.pl`.
 
-**Low (8):** `.eu`, `.in`, `.de`, `.co`, `.us`, `.uk`, `.au`, `.st`.
+**Low (8):** `.eu`, `.in`, `.de`, `.co`, `.uk`, `.us`, `.au`, `.st`.
 
 Medium contains a mix of:
 
@@ -754,7 +754,7 @@ their size would predict. Domain-level detection still applies.
 
 ### 8.5 Blocklist suitability
 
-Among Critical + High, blocklist suitability is **31 High**, **10 Medium**, and **4 Low**.
+Among Critical + High, blocklist suitability is **33 High**, **8 Medium**, and **4 Low**.
 
 - **High suitability** means low Tranco collateral and limited platform concentration: good
   candidates for TLD-level blocking in constrained environments.
@@ -827,26 +827,26 @@ High or Medium blocklist suitability and excludes high-collateral namespaces suc
 
 | TLD | Category | Tier | Suitability | Density/10k | Annual domains | Malicious share | Live domains | Confidence |
 |---|---|---|---|---:|---:|---:|---:|---|
-| `.top` | new gTLD | Critical | Medium | 596.1 | 375,514 | 79.2% | 9,113 | High |
-| `.icu` | new gTLD | Critical | High | 1,607.0 | 74,786 | 95.0% | 1,985 | High |
-| `.cfd` | new gTLD | Critical | High | 1,387.4 | 70,944 | 95.1% | 2,931 | High |
-| `.xin` | new gTLD | Critical | High | 5,910.0 | 35,077 | 95.6% | 266 | High |
+| `.top` | new gTLD | Critical | Medium | 596.1 | 375,514 | 79.2% | 9,144 | High |
+| `.icu` | new gTLD | Critical | High | 1,607.0 | 74,786 | 95.0% | 1,971 | High |
+| `.cfd` | new gTLD | Critical | High | 1,387.4 | 70,944 | 95.1% | 3,059 | High |
+| `.xin` | new gTLD | Critical | High | 5,910.0 | 35,077 | 95.6% | 265 | High |
+| `.pro` | legacy gTLD | Critical | Medium | 1,200.1 | 130,945 | 84.5% | 2,527 | High |
 | `.win` | new gTLD | Critical | High | 1,640.7 | 18,626 | 74.0% | 111 | Medium |
-| `.pro` | legacy gTLD | Critical | Medium | 1,200.1 | 130,945 | 84.5% | 2,392 | High |
-| `.cyou` | new gTLD | Critical | High | 661.6 | 29,923 | 95.9% | 5,688 | High |
-| `.help` | new gTLD | Critical | High | 1,058.5 | 18,715 | 74.0% | 752 | Medium |
-| `.vip` | new gTLD | Critical | Medium | 501.0 | 83,816 | 95.1% | 1,745 | High |
-| `.garden` | new gTLD | Critical | High | 1,567.7 | 10,340 | 74.0% | 23 | Medium |
-| `.lol` | new gTLD | Critical | High | 468.6 | 24,187 | 95.6% | 759 | Medium |
-| `.live` | new gTLD | High | Medium | 739.8 | 41,523 | 90.4% | 5,648 | High |
-| `.xyz` | new gTLD | High | Medium | 118.2 | 93,987 | 84.5% | 6,943 | High |
-| `.cc` | ccTLD | High | Medium | 319.4 | 77,660 | 93.0% | 3,736 | High |
-| `.sbs` | new gTLD | High | High | 463.5 | 63,518 | 94.0% | 5,924 | High |
+| `.cyou` | new gTLD | Critical | High | 661.6 | 29,923 | 95.9% | 5,639 | High |
+| `.help` | new gTLD | Critical | High | 1,058.5 | 18,715 | 74.0% | 757 | Medium |
+| `.vip` | new gTLD | Critical | High | 501.0 | 83,816 | 95.1% | 1,742 | High |
+| `.garden` | new gTLD | Critical | High | 1,567.7 | 10,340 | 74.0% | 21 | Medium |
+| `.lol` | new gTLD | Critical | High | 468.6 | 24,187 | 95.6% | 747 | Medium |
+| `.live` | new gTLD | High | High | 739.8 | 41,523 | 90.4% | 5,712 | High |
+| `.xyz` | new gTLD | High | Medium | 118.2 | 93,987 | 84.5% | 6,901 | High |
+| `.cc` | ccTLD | High | Medium | 319.4 | 77,660 | 93.0% | 3,711 | High |
+| `.sbs` | new gTLD | High | High | 463.5 | 63,518 | 94.0% | 6,104 | High |
+| `.info` | legacy gTLD | High | Medium | 189.7 | 99,602 | 71.8% | 5,639 | High |
 | `.mobi` | legacy gTLD | High | High | 845.1 | 33,424 | 90.5% | 97 | Medium |
-| `.info` | legacy gTLD | High | Medium | 189.7 | 99,602 | 71.8% | 5,762 | High |
-| `.rest` | new gTLD | High | High | 981.0 | 7,774 | 74.0% | 472 | Medium |
-| `.shop` | new gTLD | High | Medium | 202.0 | 79,625 | 60.9% | 14,961 | High |
-| `.best` | new gTLD | High | High | 706.6 | 2,563 | 74.0% | 102 | Medium |
+| `.rest` | new gTLD | High | High | 981.0 | 7,774 | 74.0% | 489 | Medium |
+| `.shop` | new gTLD | High | Medium | 202.0 | 79,625 | 60.9% | 15,065 | High |
+| `.best` | new gTLD | High | High | 706.6 | 2,563 | 74.0% | 125 | Medium |
 
 Before deployment, validate: (1) legitimate business traffic to the namespace, (2) whether the
 abuse is concentrated on a platform subdomain rather than the TLD, (3) current annual data versus
@@ -919,72 +919,72 @@ timestamps, and counts. The curated annual data is committed under `data/curated
 
 | Rank | TLD | Category | Tier | Score | Confidence | Density/10k | Annual domains | Malicious share | Persistence | Live domains | Payload | C2 | Blocklist suitability |
 |---:|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | `.top` | new gTLD | Critical | 73.3 | High | 596.1 | 375,514 | 79.2% | 6/7 | 9,113 | 43 | 12 | Medium |
-| 2 | `.icu` | new gTLD | Critical | 67.2 | High | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,985 | 15 | 1 | High |
-| 3 | `.cfd` | new gTLD | Critical | 66.0 | High | 1,387.4 | 70,944 | 95.1% | 2/7 | 2,931 | 14 | 0 | High |
-| 4 | `.xin` | new gTLD | Critical | 65.0 | High | 5,910.0 | 35,077 | 95.6% | 2/7 | 266 | 0 | 0 | High |
-| 5 | `.win` | new gTLD | Critical | 63.8 | Medium | 1,640.7 | 18,626 | 74.0% | 2/7 | 111 | 25 | 1 | High |
-| 6 | `.pro` | legacy gTLD | Critical | 63.8 | High | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,392 | 12 | 0 | Medium |
-| 7 | `.cyou` | new gTLD | Critical | 62.1 | High | 661.6 | 29,923 | 95.9% | 2/7 | 5,688 | 6 | 0 | High |
-| 8 | `.help` | new gTLD | Critical | 61.7 | Medium | 1,058.5 | 18,715 | 74.0% | 2/7 | 752 | 5 | 2 | High |
-| 9 | `.vip` | new gTLD | Critical | 59.0 | High | 501.0 | 83,816 | 95.1% | 1/7 | 1,745 | 6 | 2 | Medium |
-| 10 | `.garden` | new gTLD | Critical | 56.8 | Medium | 1,567.7 | 10,340 | 74.0% | 1/7 | 23 | 0 | 0 | High |
-| 11 | `.lol` | new gTLD | Critical | 55.9 | Medium | 468.6 | 24,187 | 95.6% | 1/7 | 759 | 20 | 1 | High |
-| 12 | `.com` | legacy gTLD | High | 68.2 | High | 53.7 | 869,180 | 66.5% | 7/7 | 105,529 | 621 | 46 | Low |
-| 13 | `.live` | new gTLD | High | 63.7 | High | 739.8 | 41,523 | 90.4% | 3/7 | 5,648 | 14 | 0 | Medium |
-| 14 | `.xyz` | new gTLD | High | 61.6 | High | 118.2 | 93,987 | 84.5% | 6/7 | 6,943 | 30 | 4 | Medium |
-| 15 | `.cn` | ccTLD | High | 60.4 | High | 135.7 | 167,651 | 39.3% | 6/7 | 3,091 | 21 | 5 | Low |
-| 16 | `.cc` | ccTLD | High | 60.0 | High | 319.4 | 77,660 | 93.0% | 1/7 | 3,736 | 45 | 2 | Medium |
-| 17 | `.sbs` | new gTLD | High | 58.8 | High | 463.5 | 63,518 | 94.0% | 1/7 | 5,924 | 10 | 2 | High |
-| 18 | `.mobi` | legacy gTLD | High | 57.5 | Medium | 845.1 | 33,424 | 90.5% | 1/7 | 97 | 0 | 0 | High |
-| 19 | `.info` | legacy gTLD | High | 57.5 | High | 189.7 | 99,602 | 71.8% | 4/7 | 5,762 | 13 | 2 | Medium |
-| 20 | `.rest` | new gTLD | High | 57.4 | Medium | 981.0 | 7,774 | 74.0% | 2/7 | 472 | 1 | 0 | High |
-| 21 | `.shop` | new gTLD | High | 56.5 | High | 202.0 | 79,625 | 60.9% | 4/7 | 14,961 | 22 | 5 | Medium |
-| 22 | `.best` | new gTLD | High | 55.0 | Medium | 706.6 | 2,563 | 74.0% | 3/7 | 102 | 3 | 0 | High |
-| 23 | `.click` | new gTLD | High | 54.7 | High | 492.7 | 35,653 | 90.2% | 0/7 | 3,579 | 4 | 3 | High |
-| 24 | `.mom` | new gTLD | High | 53.9 | Medium | 996.9 | 5,728 | 74.0% | 1/7 | 1,000 | 1 | 0 | High |
-| 25 | `.lat` | new gTLD | High | 53.9 | Medium | 664.5 | 9,137 | 74.0% | 0/7 | 1,176 | 5 | 1 | High |
-| 26 | `.bond` | new gTLD | High | 53.9 | High | 362.8 | 41,594 | 99.0% | 2/7 | 429 | 1 | 1 | High |
-| 27 | `.qpon` | new gTLD | High | 53.3 | Medium | 819.8 | 5,941 | 74.0% | 0/7 | 387 | 4 | 0 | High |
-| 28 | `.net` | legacy gTLD | High | 52.9 | High | 46.2 | 56,360 | 69.4% | 4/7 | 10,691 | 87 | 7 | Low |
-| 29 | `.life` | new gTLD | High | 52.5 | Medium | 525.9 | 21,836 | 74.0% | 0/7 | 464 | 11 | 0 | High |
-| 30 | `.online` | new gTLD | High | 51.8 | High | 142.8 | 47,376 | 80.6% | 2/7 | 2,357 | 15 | 4 | Medium |
-| 31 | `.ink` | new gTLD | High | 51.4 | Medium | 718.4 | 7,980 | 74.0% | 0/7 | 256 | 4 | 0 | High |
-| 32 | `.world` | new gTLD | High | 50.6 | Low | 493.6 | 15,408 | 94.0% | 1/7 | 333 | 1 | 0 | High |
-| 33 | `.jp` | ccTLD | High | 50.4 | Medium | 259.6 | 46,845 | 74.0% | 0/7 | 293 | 6 | 0 | Low |
-| 34 | `.support` | new gTLD | High | 49.7 | Medium | 557.3 | 2,086 | 74.0% | 3/7 | 166 | 0 | 0 | High |
+| 1 | `.top` | new gTLD | Critical | 73.5 | High | 596.1 | 375,514 | 79.2% | 6/7 | 9,144 | 51 | 11 | Medium |
+| 2 | `.icu` | new gTLD | Critical | 68.1 | High | 1,607.0 | 74,786 | 95.0% | 1/7 | 1,971 | 19 | 2 | High |
+| 3 | `.cfd` | new gTLD | Critical | 65.8 | High | 1,387.4 | 70,944 | 95.1% | 2/7 | 3,059 | 12 | 0 | High |
+| 4 | `.xin` | new gTLD | Critical | 65.0 | High | 5,910.0 | 35,077 | 95.6% | 2/7 | 265 | 0 | 0 | High |
+| 5 | `.pro` | legacy gTLD | Critical | 63.9 | High | 1,200.1 | 130,945 | 84.5% | 1/7 | 2,527 | 13 | 0 | Medium |
+| 6 | `.win` | new gTLD | Critical | 63.8 | Medium | 1,640.7 | 18,626 | 74.0% | 2/7 | 111 | 25 | 1 | High |
+| 7 | `.cyou` | new gTLD | Critical | 62.1 | High | 661.6 | 29,923 | 95.9% | 2/7 | 5,639 | 6 | 0 | High |
+| 8 | `.help` | new gTLD | Critical | 62.0 | Medium | 1,058.5 | 18,715 | 74.0% | 2/7 | 757 | 6 | 2 | High |
+| 9 | `.vip` | new gTLD | Critical | 58.8 | High | 501.0 | 83,816 | 95.1% | 1/7 | 1,742 | 5 | 2 | High |
+| 10 | `.garden` | new gTLD | Critical | 56.8 | Medium | 1,567.7 | 10,340 | 74.0% | 1/7 | 21 | 0 | 0 | High |
+| 11 | `.lol` | new gTLD | Critical | 55.9 | Medium | 468.6 | 24,187 | 95.6% | 1/7 | 747 | 19 | 1 | High |
+| 12 | `.com` | legacy gTLD | High | 68.2 | High | 53.7 | 869,180 | 66.5% | 7/7 | 105,620 | 624 | 44 | Low |
+| 13 | `.live` | new gTLD | High | 63.7 | High | 739.8 | 41,523 | 90.4% | 3/7 | 5,712 | 14 | 0 | High |
+| 14 | `.xyz` | new gTLD | High | 61.7 | High | 118.2 | 93,987 | 84.5% | 6/7 | 6,901 | 32 | 4 | Medium |
+| 15 | `.cn` | ccTLD | High | 60.5 | High | 135.7 | 167,651 | 39.3% | 6/7 | 3,090 | 23 | 5 | Low |
+| 16 | `.cc` | ccTLD | High | 60.1 | High | 319.4 | 77,660 | 93.0% | 1/7 | 3,711 | 50 | 2 | Medium |
+| 17 | `.sbs` | new gTLD | High | 58.9 | High | 463.5 | 63,518 | 94.0% | 1/7 | 6,104 | 11 | 2 | High |
+| 18 | `.info` | legacy gTLD | High | 57.7 | High | 189.7 | 99,602 | 71.8% | 4/7 | 5,639 | 15 | 2 | Medium |
+| 19 | `.mobi` | legacy gTLD | High | 57.5 | Medium | 845.1 | 33,424 | 90.5% | 1/7 | 97 | 0 | 0 | High |
+| 20 | `.rest` | new gTLD | High | 57.3 | Medium | 981.0 | 7,774 | 74.0% | 2/7 | 489 | 1 | 0 | High |
+| 21 | `.shop` | new gTLD | High | 56.0 | High | 202.0 | 79,625 | 60.9% | 4/7 | 15,065 | 18 | 4 | Medium |
+| 22 | `.best` | new gTLD | High | 55.0 | Medium | 706.6 | 2,563 | 74.0% | 3/7 | 125 | 3 | 0 | High |
+| 23 | `.click` | new gTLD | High | 54.8 | High | 492.7 | 35,653 | 90.2% | 0/7 | 3,609 | 4 | 3 | High |
+| 24 | `.lat` | new gTLD | High | 54.4 | Medium | 664.5 | 9,137 | 74.0% | 0/7 | 1,136 | 7 | 1 | High |
+| 25 | `.mom` | new gTLD | High | 53.9 | Medium | 996.9 | 5,728 | 74.0% | 1/7 | 996 | 1 | 0 | High |
+| 26 | `.bond` | new gTLD | High | 53.9 | High | 362.8 | 41,594 | 99.0% | 2/7 | 443 | 1 | 1 | High |
+| 27 | `.qpon` | new gTLD | High | 53.3 | Medium | 819.8 | 5,941 | 74.0% | 0/7 | 386 | 4 | 0 | High |
+| 28 | `.net` | legacy gTLD | High | 52.8 | High | 46.2 | 56,360 | 69.4% | 4/7 | 10,712 | 89 | 6 | Low |
+| 29 | `.life` | new gTLD | High | 52.5 | Medium | 525.9 | 21,836 | 74.0% | 0/7 | 466 | 11 | 0 | High |
+| 30 | `.online` | new gTLD | High | 52.1 | High | 142.8 | 47,376 | 80.6% | 2/7 | 2,352 | 18 | 4 | Medium |
+| 31 | `.ink` | new gTLD | High | 51.4 | Medium | 718.4 | 7,980 | 74.0% | 0/7 | 246 | 4 | 0 | High |
+| 32 | `.world` | new gTLD | High | 50.6 | Low | 493.6 | 15,408 | 94.0% | 1/7 | 331 | 1 | 0 | High |
+| 33 | `.jp` | ccTLD | High | 50.4 | Medium | 259.6 | 46,845 | 74.0% | 0/7 | 290 | 6 | 0 | Low |
+| 34 | `.support` | new gTLD | High | 49.7 | Medium | 557.3 | 2,086 | 74.0% | 3/7 | 165 | 0 | 0 | High |
 | 35 | `.tk` | ccTLD | High | 49.7 | Medium | 258.8 | 2,057 | 74.0% | 5/7 | 3,107 | 0 | 0 | High |
 | 36 | `.finance` | new gTLD | High | 49.5 | Low | 601.9 | 1,930 | 74.0% | 2/7 | 51 | 0 | 0 | High |
 | 37 | `.cf` | ccTLD | High | 48.7 | Medium | — | — | — | 2/7 | 1,400 | 0 | 0 | High |
-| 38 | `.ml` | ccTLD | High | 48.6 | Medium | — | — | — | 3/7 | 2,196 | 0 | 1 | High |
+| 38 | `.ml` | ccTLD | High | 48.4 | Medium | — | — | — | 3/7 | 2,196 | 0 | 1 | High |
 | 39 | `.fyi` | new gTLD | High | 48.2 | Low | 478.0 | 4,082 | 74.0% | 1/7 | 25 | 0 | 0 | High |
 | 40 | `.wang` | new gTLD | High | 47.7 | Medium | 540.8 | 2,288 | 74.0% | 0/7 | 32 | 0 | 0 | High |
 | 41 | `.homes` | new gTLD | High | 47.7 | Medium | 522.8 | 4,365 | 74.0% | 0/7 | 138 | 0 | 0 | High |
 | 42 | `.gq` | ccTLD | High | 46.5 | Medium | — | — | — | 1/7 | 1,323 | 0 | 0 | High |
-| 43 | `.club` | new gTLD | High | 46.4 | Medium | 226.2 | 13,260 | 96.2% | 0/7 | 1,142 | 5 | 0 | High |
-| 44 | `.site` | new gTLD | High | 45.9 | Medium | 135.8 | 20,595 | 78.6% | 0/7 | 5,449 | 20 | 3 | Medium |
+| 43 | `.club` | new gTLD | High | 46.4 | Medium | 226.2 | 13,260 | 96.2% | 0/7 | 1,116 | 5 | 0 | High |
+| 44 | `.site` | new gTLD | High | 45.9 | Medium | 135.8 | 20,595 | 78.6% | 0/7 | 5,298 | 19 | 3 | Medium |
 | 45 | `.ga` | ccTLD | High | 45.5 | Medium | — | — | — | 2/7 | 1,836 | 0 | 0 | High |
-| 46 | `.buzz` | new gTLD | Medium | 47.0 | Medium | 270.2 | 7,788 | 74.0% | 2/7 | 854 | 1 | 0 | High |
-| 47 | `.monster` | new gTLD | Medium | 46.6 | Medium | 315.7 | 1,476 | 74.0% | 2/7 | 143 | 1 | 0 | High |
-| 48 | `.org` | legacy gTLD | Medium | 42.1 | Medium | 29.8 | 35,176 | 74.0% | 1/7 | 5,665 | 61 | 2 | Low |
-| 49 | `.pics` | new gTLD | Medium | 42.0 | Medium | 303.9 | 1,770 | 74.0% | 1/7 | 369 | 0 | 0 | High |
-| 50 | `.quest` | new gTLD | Medium | 41.7 | Low | 318.6 | 1,377 | 74.0% | 1/7 | 82 | 0 | 0 | High |
+| 46 | `.buzz` | new gTLD | Medium | 47.7 | Medium | 270.2 | 7,788 | 74.0% | 2/7 | 856 | 2 | 0 | High |
+| 47 | `.monster` | new gTLD | Medium | 45.5 | Medium | 315.7 | 1,476 | 74.0% | 2/7 | 143 | 0 | 0 | High |
+| 48 | `.org` | legacy gTLD | Medium | 42.2 | Medium | 29.8 | 35,176 | 74.0% | 1/7 | 5,677 | 62 | 2 | Low |
+| 49 | `.pics` | new gTLD | Medium | 42.0 | Medium | 303.9 | 1,770 | 74.0% | 1/7 | 400 | 0 | 0 | High |
+| 50 | `.quest` | new gTLD | Medium | 41.7 | Low | 318.6 | 1,377 | 74.0% | 1/7 | 87 | 0 | 0 | High |
 | 51 | `.zone` | new gTLD | Medium | 41.5 | Low | 330.5 | 2,559 | 74.0% | 0/7 | 7 | 1 | 0 | High |
-| 52 | `.ru` | ccTLD | Medium | 41.3 | Medium | 54.2 | 31,312 | 82.0% | 0/7 | 2,226 | 13 | 1 | Low |
-| 53 | `.autos` | new gTLD | Medium | 37.5 | Medium | 163.4 | 696 | 74.0% | 0/7 | 685 | 1 | 1 | High |
-| 54 | `.digital` | new gTLD | Medium | 28.0 | Medium | — | — | — | 0/7 | 2,225 | 2 | 0 | High |
-| 55 | `.store` | new gTLD | Medium | 27.7 | Medium | — | — | — | 0/7 | 3,426 | 11 | 1 | High |
-| 56 | `.id` | ccTLD | Medium | 20.3 | Medium | — | — | — | 0/7 | 3,588 | 4 | 0 | Medium |
-| 57 | `.br` | ccTLD | Medium | 18.2 | Medium | — | — | — | 0/7 | 2,825 | 24 | 0 | Low |
-| 58 | `.pl` | ccTLD | Medium | 17.0 | Medium | — | — | — | 0/7 | 2,226 | 8 | 0 | Medium |
-| 59 | `.eu` | ccTLD | Low | 17.4 | Medium | — | — | — | 0/7 | 1,980 | 6 | 0 | Medium |
-| 60 | `.in` | ccTLD | Low | 16.4 | Medium | — | — | — | 0/7 | 1,852 | 13 | 0 | Low |
-| 61 | `.de` | ccTLD | Low | 16.2 | Medium | — | — | — | 0/7 | 1,626 | 35 | 0 | Low |
-| 62 | `.co` | ccTLD | Low | 15.3 | Medium | — | — | — | 0/7 | 1,340 | 6 | 0 | Medium |
-| 63 | `.us` | ccTLD | Low | 14.9 | Low | — | — | — | 0/7 | 978 | 9 | 0 | Medium |
-| 64 | `.uk` | ccTLD | Low | 14.7 | Medium | — | — | — | 0/7 | 1,772 | 12 | 0 | Low |
-| 65 | `.au` | ccTLD | Low | 14.5 | Medium | — | — | — | 0/7 | 1,302 | 3 | 0 | Medium |
-| 66 | `.st` | ccTLD | Low | 8.9 | Low | — | — | — | 0/7 | 15 | 15 | 0 | High |
+| 52 | `.ru` | ccTLD | Medium | 40.5 | Medium | 54.2 | 31,312 | 82.0% | 0/7 | 2,224 | 14 | 0 | Low |
+| 53 | `.autos` | new gTLD | Medium | 37.5 | Medium | 163.4 | 696 | 74.0% | 0/7 | 673 | 1 | 1 | High |
+| 54 | `.store` | new gTLD | Medium | 30.2 | Medium | — | — | — | 0/7 | 4,314 | 11 | 1 | High |
+| 55 | `.digital` | new gTLD | Medium | 28.7 | Medium | — | — | — | 0/7 | 2,431 | 2 | 0 | High |
+| 56 | `.id` | ccTLD | Medium | 20.4 | Medium | — | — | — | 0/7 | 3,605 | 3 | 0 | Medium |
+| 57 | `.br` | ccTLD | Medium | 18.3 | Medium | — | — | — | 0/7 | 2,824 | 24 | 0 | Low |
+| 58 | `.pl` | ccTLD | Medium | 16.8 | Medium | — | — | — | 0/7 | 2,228 | 7 | 0 | Medium |
+| 59 | `.eu` | ccTLD | Low | 17.7 | Medium | — | — | — | 0/7 | 1,978 | 8 | 0 | Medium |
+| 60 | `.in` | ccTLD | Low | 17.5 | Medium | — | — | — | 0/7 | 1,850 | 13 | 1 | Low |
+| 61 | `.de` | ccTLD | Low | 16.1 | Medium | — | — | — | 0/7 | 1,616 | 35 | 0 | Low |
+| 62 | `.co` | ccTLD | Low | 15.1 | Medium | — | — | — | 0/7 | 1,333 | 5 | 0 | Medium |
+| 63 | `.uk` | ccTLD | Low | 14.7 | Medium | — | — | — | 0/7 | 1,793 | 12 | 0 | Low |
+| 64 | `.us` | ccTLD | Low | 14.7 | Low | — | — | — | 0/7 | 972 | 9 | 0 | Medium |
+| 65 | `.au` | ccTLD | Low | 14.3 | Medium | — | — | — | 0/7 | 1,303 | 3 | 0 | Medium |
+| 66 | `.st` | ccTLD | Low | 9.1 | Low | — | — | — | 0/7 | 17 | 15 | 0 | High |
 
 ## Appendix B: Data dictionary
 
